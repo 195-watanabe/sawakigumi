@@ -7,9 +7,9 @@
 
 // ハンバーガーメニュー
 
-$(".news").click(function () {//ボタンがクリックされたら
+$(".openbtn").click(function () {//ボタンがクリックされたら
   $(this).toggleClass('_active');//ボタン自身に activeクラスを付与し
-    $(".gnav").toggleClass('_active');//ナビゲーションにpanelactiveクラスを付与
+    $(".gnav").toggleClass('_active');//ナビゲーションに_activeクラスを付与
 });
 
 

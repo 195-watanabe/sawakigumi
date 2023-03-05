@@ -1,0 +1,22 @@
+@use "../../global" as *;
+
+.msg {
+  padding: vw_p(80) vw_p(131);
+
+  &_wrap {
+    width: 100%;
+    padding: vw_p(64) vw_p(48);
+    background-color: $lGray;
+
+    h3 {
+      @include fzp(24);
+      font-weight: 600;
+    }
+
+    p {
+      @include fzp(17);
+      line-height: 2em;
+      margin-top: vw_p(48);
+    }
+  }
+}

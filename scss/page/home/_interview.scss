@@ -1,0 +1,47 @@
+@use "../../global" as *;
+
+.interview {
+  padding: vw_p(80) vw_p(123);
+  background-color: $lGray;
+
+  .heading_c {
+    margin-bottom: vw_p(48);
+  }
+
+  &_article {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: vw_p(80);
+
+    li {
+      display: block;
+      background-color: $white;
+      width: vw_p(334);
+      padding: vw_p(16) vw_p(8);
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      h3 {
+        @include fzp(16);
+        line-height: 2em;
+        font-weight: 600;
+        margin: vw_p(16) vw_p(7);
+      }
+
+      p {
+        @include fzp(16);
+        color: $blue;
+        font-weight: 600;
+        margin: 0 vw_p(7);
+      }
+    }
+  }
+
+  &_wrap {
+    display: flex;
+    justify-content: center;
+  }
+}

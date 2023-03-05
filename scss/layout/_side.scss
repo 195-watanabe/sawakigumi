@@ -1,0 +1,44 @@
+@use "../global" as *;
+
+.side {
+  position: fixed;
+  z-index: 100;
+  top: vw_p(90);
+  right: 0;
+  float: right;
+  
+  &_nav {
+    // display: flex;
+    // flex-direction: column;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+
+    li {
+      position: relative;
+      display: block;
+      width: vw_p(90);
+      height: vw_p(219.5);
+      color: $white;
+      background-color: $black;
+      
+      a {
+        @include fzp(17);
+        font-weight: 400;
+        letter-spacing: .2em;
+        display: inline-block;
+        writing-mode: vertical-rl;
+        line-height: vw_p(90);
+        padding-top: vw_p(45);
+        padding-bottom: vw_p(36);
+      }
+    }
+    
+    ._gray {
+      background-color: $gray;
+    }
+  }
+
+  @include mq(tb) {
+    display: none;
+  } 
+}

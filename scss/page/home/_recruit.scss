@@ -1,0 +1,63 @@
+@use "../../global" as *;
+
+.recruit {
+  background-color: $white;
+  padding: vw_p(72) 0 vw_p(120) vw_p(123);
+  display: flex;
+
+  &_left {
+    width: vw_p(533);
+    padding-right: vw_p(124);
+  }
+
+  &_heading {
+    position: relative;
+
+    h2 {
+      @include fzp(48);
+      font-weight: 600;
+      margin-bottom: vw_p(18);
+    }
+    
+    p {
+      @include fzp(24);
+      font-weight: 600;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: vw_p(76);
+      height: vw_p(3);
+      background-color: $black;
+      top: vw_p(28);
+      left: vw_p(180);
+    }
+  }
+
+  &_title {
+    @include fzp(24);
+    font-weight: 600;
+    margin-top: vw_p(64);
+  }
+
+  &_txt {
+    @include fzp(16);
+    line-height: 2em;
+    margin-top: vw_p(48);
+  }
+
+  .btn_blue {
+    margin-top: vw_p(48);
+  }
+
+  &_right {
+    margin-top: vw_p(48);
+    width: vw_p(624);
+    height: vw_p(612);
+    background-image:url(../img/recruit1.jpeg);
+    background-size: cover;
+    background-position: 80% 50%;
+  }
+}

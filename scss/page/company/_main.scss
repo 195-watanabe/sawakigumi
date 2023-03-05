@@ -1,0 +1,67 @@
+@use "../../global" as *;
+
+.main {
+
+  &_wrap {
+    display: grid;
+    grid-template: auto / vw_p(181) 1fr;
+    padding-left: vw_p(123);
+  }
+
+  &_left {
+    position: relative;
+    display: block;
+  }
+
+  &_menu {
+    position: sticky;
+    display: inline-block;
+    top: vw_p(200);
+    margin: vw_p(190) 0;
+
+    li {
+      position: relative;
+      @include fzp(18);
+      font-weight: 600;
+      color: $dGray;
+      line-height: 1.5em;
+      margin-bottom: vw_p(36);
+      transition: .2s;
+      
+      &::before {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: vw_p(-20);
+        width: vw_p(8);
+        height: vw_p(8);
+        transform: translateY(-50%);
+        background-color: $org;
+        content: "";
+          visibility: hidden;
+          // transition: .2s;
+      }
+
+      &._current {
+        a {
+            color: $org;
+          }
+
+        &::before {
+          display: block;
+          visibility: visible;
+        }
+
+      }
+
+      a {
+        color: $gray;
+      }
+    }
+
+  }
+
+  &_right {
+    border-left: solid vw_p(1) $black;
+  }
+}

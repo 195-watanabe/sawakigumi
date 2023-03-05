@@ -1,0 +1,59 @@
+@use "../../global" as *;
+
+.bumon {
+  background-color: $lGray;
+  padding-top: vw_p(128);
+  padding-left: vw_p(89);
+
+  &_sec {
+    display: flex;
+    background-color: $white;
+    padding-left: vw_p(32);
+    padding-right: vw_p(16);
+    padding-bottom: vw_p(48);
+  }
+
+  &_title {
+    position: relative;
+    writing-mode: vertical-rl;
+    @include fzp(26);
+    font-weight: 600;
+    letter-spacing: .3em;
+    margin-top: vw_p(48);
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: vw_p(1);
+      height: vw_p(180);
+      background-color: $black;
+      left: 50%;
+      top: vw_p(150);
+    }
+
+    &.kaiyoudoboku::before {
+      top: vw_p(210);
+    }
+
+    &.kankouji::before {
+      top: vw_p(180);
+    }
+  }
+
+  &_txt {
+    @include fzp(16);
+    line-height: 2em;
+    width: vw_p(427);
+    margin-top: vw_p(80);
+    margin-left: vw_p(50);
+  }
+
+  &_img {
+    display: block;
+    margin-top: vw_p(48);
+    margin-left: vw_p(48);
+    width: vw_p(598);
+    height: auto;
+  }
+}

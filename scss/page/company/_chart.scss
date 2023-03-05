@@ -1,0 +1,13 @@
+@use "../../global" as *;
+
+.chart {
+  padding-top: vw_p(128);
+  padding-left: vw_p(107);
+  padding-right: vw_p(123);
+
+  &_img {
+    margin-top: vw_p(48);
+    width: 100%;
+    height: auto;
+  }
+}

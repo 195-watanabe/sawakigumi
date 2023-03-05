@@ -1,0 +1,888 @@
+@charset "UTF-8";
+@keyframes slideshow {
+  /* 非表示状態からフェードインを開始する */
+  0% {
+    opacity: 0;
+    transform: scale(1);
+    /* ズームのための指定 */
+  }
+  /* フェードインを完了し完全表示する */
+  6% {
+    opacity: 1;
+  }
+  /* ここまで完全表示を維持したらフェードアウトを開始する */
+  33% {
+    opacity: 1;
+  }
+  /* フェードアウトを完了し非表示にする */
+  44% {
+    opacity: 0;
+    transform: scale(1.1);
+    /* ズームのための指定 */
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.btn_blue {
+  position: relative;
+  color: #ffffff;
+  font-size: 20px;
+  font-size: 1.5625vw;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  background-color: #26329E;
+  padding: 0.9375vw;
+  border: solid 0.234375vw #26329E;
+  transition: 0.2s ease-in-out;
+}
+.btn_blue img {
+  position: absolute;
+  top: 50%;
+  right: 1.09375vw;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 1.25vw;
+  height: 1.796875vw;
+  transition: 0.2s ease-in-out;
+}
+
+.btn_blue:hover {
+  color: #26329E;
+  background-color: #ffffff;
+}
+.btn_blue:hover img:nth-of-type(2) {
+  opacity: 0;
+}
+
+.heading_c {
+  font-weight: 600;
+}
+.heading_c h2 {
+  text-align: center;
+  font-size: 48px;
+  font-size: 3.75vw;
+  padding-bottom: 1.40625vw;
+}
+.heading_c p {
+  text-align: center;
+  font-size: 24px;
+  font-size: 1.875vw;
+}
+
+.heading_l {
+  font-weight: 600;
+}
+.heading_l h2 {
+  font-size: 30px;
+  font-size: 2.34375vw;
+  color: #000000;
+  padding-bottom: 0.625vw;
+}
+.heading_l p {
+  font-size: 18px;
+  font-size: 1.40625vw;
+  color: #26329E;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/*! destyle.css v4.0.0 | MIT License | https://github.com/nicolas-cusan/destyle.css */
+/* Reset box-model and set borders */
+/* ============================================ */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 0;
+}
+
+/* Document */
+/* ============================================ */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ * 3. Remove gray overlay on links for iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-tap-highlight-color: transparent;
+  /* 3*/
+}
+
+/* Sections */
+/* ============================================ */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/* Vertical rhythm */
+/* ============================================ */
+p,
+table,
+blockquote,
+address,
+pre,
+iframe,
+form,
+figure,
+dl {
+  margin: 0;
+}
+
+/* Headings */
+/* ============================================ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+/* Lists (enumeration) */
+/* ============================================ */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Lists (definition) */
+/* ============================================ */
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}
+
+/* Grouping content */
+/* ============================================ */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+  border-top-width: 1px;
+  margin: 0;
+  clear: both;
+  color: inherit;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: inherit;
+  /* 2 */
+}
+
+address {
+  font-style: inherit;
+}
+
+/* Text-level semantics */
+/* ============================================ */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: inherit;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Replaced content */
+/* ============================================ */
+/**
+ * Prevent vertical alignment issues.
+ */
+svg,
+img,
+embed,
+object,
+iframe {
+  vertical-align: bottom;
+}
+
+/* Forms */
+/* ============================================ */
+/**
+ * Reset form fields to make them styleable.
+ * 1. Make form elements stylable across systems iOS especially.
+ * 2. Inherit text-transform from parent.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  -webkit-appearance: none;
+  /* 1 */
+  -moz-appearance: none;
+       appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  text-align: inherit;
+  text-transform: inherit;
+  /* 2 */
+}
+
+/**
+ * Correct cursors for clickable elements.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  cursor: pointer;
+}
+
+button:disabled,
+[type=button]:disabled,
+[type=reset]:disabled,
+[type=submit]:disabled {
+  cursor: default;
+}
+
+/**
+ * Improve outlines for Firefox and unify style with input elements & buttons.
+ */
+:-moz-focusring {
+  outline: auto;
+}
+
+select:disabled {
+  opacity: inherit;
+}
+
+/**
+ * Remove padding
+ */
+option {
+  padding: 0;
+}
+
+/**
+ * Reset to invisible
+ */
+fieldset {
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * Correct the outline style in Safari.
+ */
+[type=search] {
+  outline-offset: -2px;
+  /* 1 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Fix font inheritance.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/**
+ * Fix appearance for Firefox
+ */
+[type=number] {
+  -moz-appearance: textfield;
+}
+
+/**
+ * Clickable labels
+ */
+label[for] {
+  cursor: pointer;
+}
+
+/* Interactive */
+/* ============================================ */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/*
+ * Remove outline for editable content.
+ */
+[contenteditable]:focus {
+  outline: auto;
+}
+
+/* Tables */
+/* ============================================ */
+/**
+1. Correct table border color inheritance in all Chrome and Safari.
+*/
+table {
+  border-color: inherit;
+  /* 1 */
+  border-collapse: collapse;
+}
+
+caption {
+  text-align: left;
+}
+
+td,
+th {
+  vertical-align: top;
+  padding: 0;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  overflow: hidden;
+}
+.header_top {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+@media screen and (max-width: 960px) {
+  .header_top {
+    flex-direction: row-reverse;
+    justify-content: start;
+  }
+}
+.header_top._active {
+  background-color: #080084;
+}
+.header_title {
+  font-family: "Noto Serif JP", serif;
+  color: #26329E;
+  font-weight: bold;
+  line-height: 6.25vw;
+  font-size: 16px;
+  font-size: 1.25vw;
+  padding-left: 1.25vw;
+}
+@media screen and (max-width: 960px) {
+  .header_title {
+    line-height: 10.4166666667vw;
+    font-size: 16px;
+    font-size: 2.0833333333vw;
+    padding-left: 2.0833333333vw;
+  }
+}
+.header_title span {
+  font-size: 24px;
+  font-size: 1.875vw;
+}
+@media screen and (max-width: 960px) {
+  .header_title span {
+    font-size: 24px;
+    font-size: 3.125vw;
+  }
+}
+.header_inner {
+  display: inline-flex;
+}
+.header_nav {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 39.0625vw;
+  margin-right: 2.5vw;
+}
+.header_nav li {
+  font-size: 14px;
+  font-size: 1.09375vw;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  line-height: 7.03125vw;
+}
+@media screen and (max-width: 960px) {
+  .header_nav {
+    display: none;
+  }
+}
+.header_logo {
+  background-color: #080084;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7.03125vw;
+  height: 7.03125vw;
+}
+@media screen and (max-width: 960px) {
+  .header_logo {
+    width: 11.71875vw;
+    height: 11.71875vw;
+  }
+}
+.header_logo img {
+  display: block;
+  width: 5.15625vw;
+  height: 5.15625vw;
+}
+@media screen and (max-width: 960px) {
+  .header_logo img {
+    width: 8.59375vw;
+    height: 8.59375vw;
+  }
+}
+
+.hamburger {
+  display: none;
+}
+@media screen and (max-width: 960px) {
+  .hamburger {
+    position: relative;
+    display: block;
+    height: 11.71875vw;
+  }
+}
+
+.openbtn {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10.15625vw;
+  height: 10.15625vw;
+  margin: 0.78125vw;
+  background-color: #ffffff;
+  border: solid 0.2604166667vw #080084;
+  border-radius: 50%;
+  z-index: 100;
+}
+.openbtn_wrap {
+  position: relative;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+}
+.openbtn_wrap span {
+  display: block;
+  position: absolute;
+  width: 5.7291666667vw;
+  height: 0.2604166667vw;
+  background-color: #080084;
+  margin: 1.953125vw;
+  top: 0.5208333333vw;
+}
+.openbtn_wrap span:nth-child(2) {
+  top: 1.5625vw;
+}
+.openbtn_wrap .openbtn_txt {
+  position: absolute;
+  top: 3.2552083333vw;
+  color: #26329E;
+  margin: 1.953125vw;
+  font-size: 14px;
+  font-size: 1.8229166667vw;
+  letter-spacing: 0.08em;
+}
+
+.gnav {
+  display: none;
+}
+
+.side {
+  position: fixed;
+  z-index: 100;
+  top: 7.03125vw;
+  right: 0;
+  float: right;
+}
+.side_nav {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+.side_nav li {
+  position: relative;
+  display: block;
+  width: 7.03125vw;
+  height: 17.1484375vw;
+  color: #ffffff;
+  background-color: #000000;
+}
+.side_nav li a {
+  font-size: 17px;
+  font-size: 1.328125vw;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  display: inline-block;
+  writing-mode: vertical-rl;
+  line-height: 7.03125vw;
+  padding-top: 3.515625vw;
+  padding-bottom: 2.8125vw;
+}
+.side_nav ._gray {
+  background-color: #67635F;
+}
+@media screen and (max-width: 960px) {
+  .side {
+    display: none;
+  }
+}
+
+.breadcrumbs {
+  padding: 11.25vw 0 4.6875vw 9.609375vw;
+  color: #ffffff;
+  background-color: #26329E;
+}
+.breadcrumbs h1 {
+  font-size: 30px;
+  font-size: 2.34375vw;
+  font-weight: 600;
+}
+.breadcrumbs p {
+  font-size: 16px;
+  font-size: 1.25vw;
+  font-weight: 600;
+  margin-top: 0.625vw;
+}
+.breadcrumbs._white {
+  color: #000000;
+  background-color: #ffffff;
+}
+.breadcrumbs._white p {
+  color: #26329E;
+}
+
+.contact {
+  position: relative;
+  background-image: url(../img/contact.jpg);
+  background-size: cover;
+  background-position: 60% 30%;
+  z-index: 1;
+}
+.contact::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #26329E;
+  opacity: 0.6;
+  overflow: hidden;
+  z-index: 1;
+}
+.contact_wrap {
+  position: relative;
+  padding: 6.25vw 18.75vw;
+  z-index: 2;
+}
+.contact .heading_c {
+  color: #ffffff;
+}
+.contact_box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 16.328125vw;
+  margin-top: 3.75vw;
+}
+.contact_left {
+  border: solid 0.15625vw #ffffff;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: ease 0.2s;
+}
+.contact_left p {
+  width: 100%;
+  color: #ffffff;
+  text-align: center;
+  font-size: 24px;
+  font-size: 1.875vw;
+  font-weight: 600;
+  line-height: 1.6em;
+  transition: ease 0.2s;
+}
+.contact_left p span {
+  font-size: 48px;
+  font-size: 3.75vw;
+}
+.contact_left .contact_arrow {
+  display: block;
+  width: 3.75vw;
+  height: 3.75vw;
+  margin-top: 1.40625vw;
+  transition: ease 0.2s;
+}
+.contact_left .contact_arrow._hover {
+  display: none;
+  transition: ease 0.2s;
+}
+.contact a {
+  position: relative;
+  z-index: 4;
+}
+.contact a:hover .contact_left {
+  background-color: #26329E;
+  border: solid 0.15625vw #26329E;
+}
+.contact a:hover p {
+  transform: scale(0.9, 0.9);
+}
+.contact a:hover .contact_arrow {
+  transform: scale(1.16, 1.16);
+}
+.contact_right {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+.contact_right p {
+  width: 100%;
+  color: #26329E;
+  text-align: center;
+  font-size: 24px;
+  font-size: 1.875vw;
+  font-weight: 600;
+  line-height: 1.6em;
+}
+.contact_right p:nth-child(2) {
+  margin-top: 2.5vw;
+}
+
+.footer {
+  background-color: #333333;
+  padding: 3.75vw 1.25vw 0 1.25vw;
+}
+.footer_wrap {
+  display: flex;
+}
+.footer_logo {
+  display: block;
+  width: 5vw;
+  height: 5vw;
+}
+.footer_company {
+  height: 15.78125vw;
+  color: #ffffff;
+  font-size: 17px;
+  font-size: 1.328125vw;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 600;
+  padding-top: 1.25vw;
+  padding-left: 2.5vw;
+  padding-right: 15vw;
+  border-right: solid 0.078125vw #ffffff;
+}
+.footer_company span {
+  font-size: 28px;
+  font-size: 2.1875vw;
+}
+.footer_right {
+  display: flex;
+}
+.footer_honsya {
+  color: #ffffff;
+  padding-left: 2.96875vw;
+}
+.footer_honsya h3 {
+  margin-top: 1.40625vw;
+  margin-bottom: 1.40625vw;
+  font-size: 16px;
+  font-size: 1.25vw;
+  font-weight: 600;
+}
+.footer_honsya p {
+  font-size: 12px;
+  font-size: 0.9375vw;
+  font-weight: 400;
+  line-height: 2em;
+}
+.footer_shiten {
+  color: #ffffff;
+  padding-left: 7.8125vw;
+}
+.footer_shiten h3 {
+  margin-top: 1.40625vw;
+  margin-bottom: 1.40625vw;
+  font-size: 16px;
+  font-size: 1.25vw;
+  font-weight: 600;
+}
+.footer_shiten p {
+  font-size: 12px;
+  font-size: 0.9375vw;
+  font-weight: 400;
+  line-height: 2em;
+}
+.footer_copyright {
+  color: #ffffff;
+  font-size: 10px;
+  font-size: 0.78125vw;
+  padding: 1.40625vw 1.25vw;
+}

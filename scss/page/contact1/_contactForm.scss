@@ -1,0 +1,10 @@
+@use "../../global" as *;
+
+.contactForm {
+  background-color: $lGray;
+
+  &_wrap {
+    padding: 0;
+    
+  }
+}

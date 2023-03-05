@@ -1,0 +1,2 @@
+cmd+shift+R: オートベンダープレフィックス
+参考: https://tsudoi.org/guide2019/detail/6.html

@@ -1,0 +1,30 @@
+@use "../../global" as *;
+
+.pic {
+  position: relative;
+  width: 100vw;
+  padding: vw_p(28) vw_p(123) vw_p(54);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: vw_p(33);
+
+  li {
+    width: vw_p(320);
+    // height: vw_p(213);
+    margin-top: vw_p(45);
+
+    img {
+      width: vw_p(320);
+      height: vw_p(213);
+      object-fit: cover;
+    }
+
+    h3 {
+      margin-top: vw_p(16);
+      @include fzp(16);
+      font-weight: 600;
+      line-height: 1.6em;
+    }
+  }
+}

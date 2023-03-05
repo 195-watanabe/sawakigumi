@@ -1,0 +1,60 @@
+@use "../../global" as *;
+
+.pager {
+  display: flex;
+  justify-content: center;
+  padding-bottom: vw_p(80);
+
+  li {
+    width: vw_p(48);
+    height: vw_p(43);
+    line-height: vw_p(43);
+    text-align: center;
+    @include fzp(20);
+    border: solid vw_p(1) $black;
+    margin-left: vw_p(10);
+  }
+
+  .pre {
+    position: relative;
+    margin-left: 0;
+
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 30%;
+      height: 38%;
+      background-color: $black;
+      clip-path: polygon(0 50%, 100% 0%, 100% 100%);
+      top: 50%;
+      left: 46%;
+      transform: translate(-50%, -50%);
+    }
+
+    &._hidden {
+      display: none;
+    }
+  }
+  
+  .next {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 30%;
+      height: 38%;
+      background-color: $black;
+      clip-path: polygon(0 0, 0 100%, 100% 50%);
+      top: 50%;
+      left: 54%;
+      transform: translate(-50%, -50%);
+    }
+
+    &._hidden {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,159 @@
+@use "../global" as *;
+
+.header {
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:100;
+  width:100vw;
+  overflow: hidden;
+
+  &_top {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    background-color: $white;
+
+    @include mq(tb) {
+      flex-direction: row-reverse;
+      justify-content: start;
+    }
+
+    &._active {
+      background-color: $logo_blue;
+    }
+  }
+
+  &_title {
+    font-family: $min;
+    color: $blue;
+    font-weight: bold;
+    line-height: vw_p(80);
+    @include fzp(16);
+    padding-left: vw_p(16);
+
+    @include mq(tb) {
+      line-height: vw_t(80);
+      @include fzt(16);
+      padding-left: vw_t(16);
+    }
+
+    span {
+      @include fzp(24);
+
+      @include mq(tb) {
+        @include fzt(24);
+      }
+    }
+  }
+
+  &_inner {
+    display: inline-flex;
+  }
+
+  &_nav {
+    display: inline-flex;
+    justify-content: space-between;
+    width: vw_p(500);
+    margin-right: vw_p(32);
+
+    li {
+      @include fzp(14);
+      letter-spacing: .08em;
+      font-weight: 500;
+      line-height: vw_p(90);
+    }
+
+    @include mq(tb) {
+      display: none;
+    }
+  }
+
+  &_logo {
+    background-color: $logo_blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: vw_p(90);
+    height: vw_p(90);
+    
+    @include mq(tb) {
+      width: vw_t(90);
+      height: vw_t(90);
+    }
+    
+    img {
+      display: block;
+      width: vw_p(66);
+      height: vw_p(66);
+
+      @include mq(tb) {
+        width: vw_t(66);
+        height: vw_t(66);
+      }
+    }
+  }
+}
+
+// ハンバーガーメニュー関連
+.hamburger {
+  display: none;
+
+  @include mq(tb) {
+    position: relative;
+    display: block;
+    height: vw_t(90);
+  }
+}
+
+.openbtn {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: vw_t(78);
+  height: vw_t(78);
+  margin: vw_t(6);
+  background-color: $white;
+  border: solid vw_t(2) $logo_blue;
+  border-radius: 50%;
+  z-index: 100;
+
+  &_wrap {
+    position: relative;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+
+    span {
+      display: block;
+      position: absolute;
+      width: vw_t(44);
+      height: vw_t(2);
+      background-color: $logo_blue;
+      margin: vw_t(15);
+      top: vw_t(4);
+
+      &:nth-child(2) {
+        top: vw_t(12);
+      }
+    }
+
+    .openbtn_txt {
+      position: absolute;
+      top: vw_t(25);
+      color: $blue;
+      margin: vw_t(15);
+      @include fzt(14);
+      letter-spacing: .08em;
+    }
+  }
+}
+
+.gnav {
+  display: none;
+}
+
+.hamburger._active {
+  
+}
+

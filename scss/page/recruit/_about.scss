@@ -1,0 +1,21 @@
+@use "../../global" as *;
+
+.about {
+  padding: vw_p(80) vw_p(131);
+  background-color: $blue;
+
+  h3 {
+    color: $white;
+    @include fzp(30 );
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  p {
+    color: $white;
+    @include fzp(18);
+    text-align: center;
+    line-height: 2em;
+    margin-top: vw_p(48);
+  }
+}

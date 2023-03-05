@@ -1,0 +1,42 @@
+@use "../../global" as *;
+
+.jirei {
+  display: grid;
+  grid-template-columns: auto vw_p(837);
+  width: 100vw;
+  background-color: $white;
+  
+  &_left {
+    border-right: solid vw_p(3) $black;
+    padding: vw_p(64) vw_p(21) vw_p(57) vw_p(16);
+
+    h2 {
+      @include fzp(28);
+      font-weight: 600;
+      margin-bottom: vw_p(48);
+    }
+
+    p {
+      @include fzp(15);
+      line-height: 2em;
+      margin-bottom: vw_p(48);
+    }
+
+    button {
+      float: right;
+    }
+  }
+  
+  &_right {
+    display: grid;
+    padding: vw_p(86) vw_p(123) vw_p(86) vw_p(74);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: vw_p(40);
+
+    img {
+      width: vw_p(300);
+      height: auto;
+    }
+  }
+}

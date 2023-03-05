@@ -1,0 +1,90 @@
+@use "../../global" as *;
+
+.message {
+  overflow: hidden;
+  position: relative;
+  color: $white;
+  background-color: $blue;
+  padding: vw_p(100) vw_p(123) vw_p(104) vw_p(123);
+
+  .heading_c {
+    color: $white;
+    margin-bottom: vw_p(64);
+  }
+
+  &_txt {
+    @include fzp(16);
+    line-height: 2em;
+    margin-bottom: vw_p(100);
+  }
+
+  &_link {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 vw_p(76);
+
+    a {
+      z-index: 10;
+    }
+  }
+
+  &_btn {
+    position: relative;
+    background-color: $white;
+    width: vw_p(400);
+    height: vw_p(114);
+    padding-left: vw_p(32);
+
+    h3 {
+      @include fzp(24);
+      font-weight: 500;
+      color: $blue;
+      padding-top: vw_p(18);
+    }
+    
+    p {
+      @include fzp(14);
+      font-weight: 500;
+      color: $blue;
+      padding-top: vw_p(8);
+    }
+
+    &._left::after {
+      content: "";
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background-image: url("../img/president.jpg");
+      background-position: center;
+      background-size: cover;
+      clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    &._right::after {
+      content: "";
+      position: absolute;
+      z-index: 10;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      background-image: url("../img/saiyoutantou.jpeg");
+      background-position: center;
+      background-size: cover;
+      clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+    }
+  }
+
+  &::after {
+    z-index: 2;
+    content: "SAWAKI";
+    position: absolute;
+    bottom: vw_p(-44);
+    right: vw_p(4);
+    @include fzp(180);
+    font-weight: 600;
+  }
+}

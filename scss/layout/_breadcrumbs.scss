@@ -1,0 +1,27 @@
+@use "../global" as *;
+
+.breadcrumbs {
+  padding: vw_p(144) 0 vw_p(60) vw_p(123);
+  color: $white;
+  background-color: $blue;
+
+  h1 {
+    @include fzp(30);
+    font-weight: 600;
+  }
+
+  p {
+    @include fzp(16);
+    font-weight: 600;
+    margin-top: vw_p(8);
+  }
+
+  &._white {
+    color: $black;
+    background-color: $white;
+
+    p {
+      color: $blue;
+    }
+  }
+}

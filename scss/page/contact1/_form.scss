@@ -1,0 +1,87 @@
+@use "../../global" as *;
+
+.form {
+  position: relative;
+  padding: vw_p(0) vw_p(229) vw_p(126);
+
+  &_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: vw_p(80) vw_p(107) vw_p(80);
+    background-color: $white;
+  }
+
+  form {
+    position: relative;
+  }
+
+  &_row {
+    width: 100%;
+    height: vw_p(43);
+    margin-bottom: vw_p(36);
+    
+    label {
+      display: flex;
+    }
+    
+    &._textarea {
+      height: auto;
+      margin: 0;
+
+      label {
+        align-items: start;
+      }
+    }
+  }
+
+  &_label {
+    display: inline-block;
+    width: vw_p(251);
+    @include fzp(16);
+    line-height: vw_p(43);
+
+    span {
+      color: red;
+    }
+  }
+
+  input {
+    box-sizing: border-box;
+    width: vw_p(353);
+    padding: vw_p(12);
+    border: solid vw_p(1) $gray;
+    color: $gray;
+  }
+
+  textarea {
+    box-sizing: border-box;
+    width: vw_p(353);
+    padding: vw_p(12);
+    border: solid vw_p(1) $gray;
+    color: $gray;
+    line-height: 1.6em;
+  }
+
+  &_btn {
+    display: inline-block;
+    padding: vw_p(16) vw_p(64);
+    background: $blue;
+    margin-top: vw_p(80);
+
+    a {
+      color: $white;
+      font-weight: 600;
+    }
+  } 
+
+  .multiform {
+    width: vw_p(353);
+    padding: vw_p(12);
+    border: none;
+    color: $gray;
+    line-height: 1.6em;
+  }
+}
+

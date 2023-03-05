@@ -1,0 +1,25 @@
+// @use "../variable" as *;
+
+// $breakpoint: (
+//   "sp": "screen and (max-width: 520px)",
+//   "tb": "screen and (max-width: 960px)",
+//   "pc": "screen and (max-width: 1000px)",
+//   );
+
+// @mixin mq($bp) {
+//   @media #{map.get($breakpoint, $bp)} {
+//     @content;
+//   }
+// }
+
+$breakpoint: (
+  sp: 'screen and (max-width: 520px)',
+  tb: 'screen and (max-width: 960px)'
+  // pc: 'screen and (min-width: 1025px)'
+);
+
+@mixin mq($bp) {
+  @media #{map-get($breakpoint, $bp)} {
+    @content;
+  }
+}

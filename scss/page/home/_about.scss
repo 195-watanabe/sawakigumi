@@ -1,0 +1,37 @@
+@use "../../global" as *;
+
+.about {
+  display: grid;
+  grid-template-columns: vw_p(730) auto;
+  width: 100vw;
+  background-color: $lGray;
+  border-bottom: solid vw_p(3) $black;
+
+  &_left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    img {
+      width: vw_p(640);
+      height: auto;
+    }
+  }
+  
+  &_right {
+    border-left: solid vw_p(3) $black;
+    padding: vw_p(64) vw_p(114) vw_p(64) vw_p(32);
+
+    h2 {
+      @include fzp(28);
+      font-weight: 600;
+      margin-bottom: vw_p(48);
+    }
+
+    p {
+      @include fzp(15);
+      line-height: 2em;
+      margin-bottom: vw_p(48);
+    }
+  }
+}

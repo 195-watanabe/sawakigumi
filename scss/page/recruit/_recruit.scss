@@ -1,0 +1,55 @@
+@use "../../global" as *;
+
+.recruit {
+  
+  &_wrap {
+    padding: vw_p(168) vw_p(123) vw_p(100);
+  }
+  
+  &_table {
+    padding: vw_p(100) vw_p(74) 0 vw_p(74);
+    width: 100%;
+
+    tr {
+      width: 100%;
+      border-top: solid vw_p(1) $black;
+      border-bottom: solid vw_p(1) $black;
+    }
+
+    th {
+      width: vw_p(339);
+      padding: vw_p(30) vw_p(30) vw_p(30) vw_p(8);
+      @include fzp(16);
+      font-weight: 400;
+      line-height: 1.8;
+    }
+    
+    td {
+      width: vw_p(381);
+      padding: vw_p(30) vw_p(30) vw_p(30) 0;
+      @include fzp(16);
+      line-height: 1.8;
+    }
+
+    ._short {
+      width: vw_p(240);
+    }
+  }
+
+  &_parallax {
+    width: vw_p(1280);
+    height: vw_p(240);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .par_1 {
+    background-image: url(../img/parallax01.jpg);
+  }
+
+  .par_2 {
+    background-image: url(../img/parallax02.jpg);
+  }
+}

@@ -1,0 +1,61 @@
+@use "../../global" as *;
+
+.subete {
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.subete::before {
+  content: "";
+  display: block;
+  z-index: -2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  // height: vw_p(680);
+  height: 100%;
+  clip-path: polygon(50% 100%, 0% 0%, 100% 0%, 100% 100%);
+  background-color: $blue;
+}
+
+.subete::after {
+  content: "";
+  display: block;
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  left: vw_p(730);
+  width: vw_p(3);
+  height: 30%;
+  background-color: $white;
+}
+
+.subete_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: vw_p(64) 0;
+}
+
+.subete_heading {
+  z-index: 1;
+  color: $white;
+  font-weight: 600;
+  line-height: 1.8em;
+  letter-spacing: .12em;
+  text-align: center;
+  @include fzp(36);
+
+  span {
+    @include fzp(64);
+  }
+}
+
+.subete_video{
+  margin-top: vw_p(32);
+  width: vw_p(660);
+  height: vw_p(400);
+}

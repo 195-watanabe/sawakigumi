@@ -1,0 +1,29 @@
+@use "../../global" as *;
+
+.background {
+  position: absolute;
+  display: flex;
+  width: 120vw;
+  top: vw_p(-40);
+  left: vw_p(-133);
+  flex-direction: column;
+
+  li {
+    width: vw_p(640);
+    height: vw_p(640);
+    margin-left: vw_p(800);
+    margin-bottom: vw_p(0);
+  }
+
+  li:nth-child(even) {
+    margin-left: vw_p(0);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    opacity: .3;
+    // width: vw_p(400);
+    // height: auto;
+  }
+}

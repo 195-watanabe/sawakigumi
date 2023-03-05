@@ -1,0 +1,34 @@
+@use "../global" as *;
+
+.btn_blue {
+  position: relative;
+  color: $white;
+  @include fzp(20);
+  font-weight: 600;
+  letter-spacing: .1em;
+  background-color: $blue;
+  padding: vw_p(12);
+  border: solid vw_p(3) $blue;
+  transition: .2s ease-in-out;
+
+  img {
+    position: absolute;
+    top: 50%;
+    right: vw_p(14);
+    transform: translate(-50%, -50%);
+    display: block;
+    width: vw_p(16);
+    height: vw_p(23);
+    transition: .2s ease-in-out;
+  }
+}
+
+.btn_blue:hover{
+  color: $blue;
+  background-color: $white;
+  // border: solid vw_p(3) $blue;
+
+  img:nth-of-type(2) {
+  opacity: 0;
+  }
+}

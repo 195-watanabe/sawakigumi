@@ -1,0 +1,35 @@
+// モニタサイズ1280pxを起点にしたvwのサイズ指定(PC)
+@function vw_p($size, $viewport: 1280) {
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+// 上記のvwを利用したフォントサイズの指定
+@mixin fzp($font_size: 12) {
+  font-size: $font_size * 1px; //vw非対応の場合の保険
+  font-size: vw_p($font_size); //フォントをvw指定
+}
+
+// モニタサイズ768pxを起点にしたvwのサイズ指定(tab)
+@function vw_t($size, $viewport: 768) {
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+// 上記のvwを利用したフォントサイズの指定
+@mixin fzt($font_size: 12) {
+  font-size: $font_size * 1px; //vw非対応の場合の保険
+  font-size: vw_t($font_size); //フォントをvw指定
+}
+
+// モニタサイズ360pxを起点にしたvwのサイズ指定(sp)
+@function vw_s($size, $viewport: 360) {
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+// 上記のvwを利用したフォントサイズの指定
+@mixin fzs($font_size: 12) {
+  font-size: $font_size * 1px; //vw非対応の場合の保険
+  font-size: vw_s($font_size); //フォントをvw指定
+}

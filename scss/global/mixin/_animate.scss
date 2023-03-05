@@ -1,0 +1,49 @@
+@keyframes slideshow {
+  /* 非表示状態からフェードインを開始する */
+  0% {
+    opacity: 0;
+    transform: scale(1);
+    /* ズームのための指定 */
+  }
+
+  /* フェードインを完了し完全表示する */
+  6% {
+    opacity: 1;
+  }
+
+  /* ここまで完全表示を維持したらフェードアウトを開始する */
+  33% {
+    opacity: 1;
+  }
+
+  /* フェードアウトを完了し非表示にする */
+  44% {
+    opacity: 0;
+    transform: scale(1.1);
+    /* ズームのための指定 */
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

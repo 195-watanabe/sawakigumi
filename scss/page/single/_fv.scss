@@ -1,0 +1,76 @@
+@use "../../global" as *;
+
+.fv {
+
+  &_heading {
+    @include fzp(26);
+    font-weight: 600;
+    line-height: 2em;
+    padding: vw_p(80) vw_p(123) vw_p(64);
+  }
+
+  &_wrap {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100vw;
+      height: 70%;
+      background-color: $lGray;
+      bottom: 0;
+      z-index: -1;
+    }
+  }
+
+  &_img {
+    width: vw_p(821);
+    height: vw_p(630);
+    margin-left: vw_p(123);
+    padding-bottom: vw_p(90);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &_txtbox {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: vw_p(36) vw_p(44);
+    background-color: $white;
+  }
+
+  &_info {
+    position: relative;
+    width: vw_p(462);
+
+
+    &::after {
+      position: absolute;
+      bottom: vw_p(-8);
+      content: "";
+      display: block;
+      width: vw_p(380);
+      height: vw_p(1);
+      background-color: $black;
+    }
+
+    p {
+      color: $blue;
+      @include fzp(22);
+      font-weight: 600;
+      padding-bottom: vw_p(8);
+    }
+  }
+  &_name {
+    margin-top: vw_p(24);
+    @include fzp(30);
+    color: $black;
+    font-weight: 400;
+  }
+}

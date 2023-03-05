@@ -1,0 +1,102 @@
+@use "../../global" as *;
+
+.strong {
+  background-color: $lGray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: vw_p(100);
+  padding-bottom: vw_p(128);
+  border-bottom: solid vw_p(1) $black;
+
+  h3 {
+    display: inline-block;
+    position: relative;
+    @include fzp(28);
+    font-weight: 600;
+    padding: 0 vw_p(10);
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: vw_p(198);
+      height: vw_p(1);
+      top: 50%;
+      right: vw_p(-10);
+      transform: translateX(100%);
+      background-color: $black;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: vw_p(198);
+      height: vw_p(1);
+      top: 50%;
+      left: vw_p(-10);
+      transform: translateX(-100%);
+      background-color: $black;
+    }
+  }
+
+  &_list {
+    margin-top: vw_p(100);
+    width: vw_p(1046);
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_item {
+    position: relative;
+    display: block;
+    width: vw_p(300);
+    height: vw_p(300);
+    background-color: $white;
+    border: solid vw_p(2) $blue;
+    border-radius: 50%;
+    padding: vw_p(6);
+  }
+
+  &_circle {
+    width: 100%;
+    height: 100%;
+    background-color: $blue;
+    border-radius: 50%;
+  }
+
+  h4 {
+    position: relative;
+    color: $white;
+    text-align: center;
+    @include fzp(48);
+    // font-weight: 600;
+    padding-top: vw_p(21);
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: 2;
+      width: vw_p(80);
+      height: vw_p(1);
+      bottom: vw_p(-2);
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $white;
+    }
+  }
+
+  p {
+    color: $white;
+    text-align: center;
+    @include fzp(17);
+    line-height: 2em;
+    padding-top: vw_p(21);
+  }
+
+  ._long {
+    padding-top: vw_p(10);
+  }
+}

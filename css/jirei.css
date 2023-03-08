@@ -49,11 +49,11 @@
   flex-wrap: wrap;
 }
 .category li {
-  font-size: 18px;
-  font-size: 1.40625vw;
+  font-size: 16px;
+  font-size: 1.25vw;
   color: #67635F;
   padding-bottom: 1.875vw;
-  margin-right: 1.875vw;
+  margin-right: 2.5vw;
 }
 .category ._current {
   position: relative;
@@ -67,7 +67,7 @@
   height: 0.078125vw;
   background-color: #26329E;
   left: 0;
-  bottom: 1.5625vw;
+  bottom: 1.71875vw;
 }
 .category::before {
   position: absolute;
@@ -103,7 +103,7 @@
   margin-top: 1.25vw;
   font-size: 16px;
   font-size: 1.25vw;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.6em;
 }
 

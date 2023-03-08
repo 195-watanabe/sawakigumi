@@ -2,7 +2,7 @@
 
 .news {
   background-color: $white;
-  padding: vw_p(28) vw_p(18);
+  padding: vw_p(28) vw_p(75);
   display: flex;
 }
 
@@ -10,7 +10,7 @@
   display: inline-block;
   font-weight: 500;
   line-height: vw_p(28);
-  @include fzp(16);
+  @include fzp(14);
 }
 
 .cat {
@@ -18,17 +18,17 @@
   background-color: $blue;
   font-weight: 600;
   color: $white;
-  line-height: vw_p(28);
-  @include fzp(14);
-  padding: 0 vw_p(28);
-  margin-left: vw_p(28);
+  line-height: vw_p(24);
+  @include fzp(10);
+  padding: 0 vw_p(24);
+  margin-left: vw_p(24);
 }
 
 .news_heading {
   display: inline-block;
   font-weight: 500;
   line-height: vw_p(28);
-  @include fzp(16);
+  @include fzp(12);
   // padding: 0 vw_p(28);
   margin-left: vw_p(28);
 }

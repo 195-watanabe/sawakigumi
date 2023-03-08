@@ -3,12 +3,12 @@
 .article {
   position: relative;
   overflow: hidden;
-  padding: vw_p(100) vw_p(123);
+  padding: vw_p(80) vw_p(123);
   z-index: 1;
 
   &_msg {
-    @include fzp(18);
-    padding-bottom: vw_p(100);
+    @include fzp(16);
+    padding-bottom: vw_p(80);
   }
 
   &_list {
@@ -73,7 +73,7 @@
   &_left {
     position: relative;
     display: inline-block;
-    padding: vw_p(20) vw_p(32);
+    padding: vw_p(14) vw_p(32);
     background-color: rgba($color: $blue, $alpha: .7);
 
     &::before {
@@ -92,14 +92,14 @@
   &_nyuusya {
     color: $white;
     @include fzp(14);
-    font-weight: 600;
-    margin-bottom: vw_p(10);
+    font-weight: 500;
+    margin-bottom: vw_p(8);
   }
   
   &_bumon {
     color: $white;
-    @include fzp(18);
-    font-weight: 600;
+    @include fzp(14);
+    font-weight: 500;
   }
 
   &_right {
@@ -112,16 +112,16 @@
 
   &_name {
     color: $white;
-    @include fzp(24);
-    font-weight: 600;
+    @include fzp(18);
+    font-weight: 500;
   }
 
   &_heading {
     display: block;
     width: vw_p(821);
-    padding: vw_p(20);
-    @include fzp(20);
-    font-weight: 600;
+    padding: vw_p(20) vw_p(32);
+    @include fzp(18);
+    font-weight: 500;
     line-height: 2em;
     background-color: rgba($color: $white, $alpha: .7);
   }

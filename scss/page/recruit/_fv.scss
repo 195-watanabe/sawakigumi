@@ -3,16 +3,17 @@
 .fv {
   position: relative;
   width:100vw;
-  height: vw_p(560);
+  height: vw_p(460);
   background-image: url(../img/recruit.jpeg);
   background-size: cover;
+  // background-attachment: fixed;
 
   &_heading {
     position: absolute;
     color: $white;
     @include fzp(48);
     font-weight: 600;
-    left: vw_p(48);
-    bottom: vw_p(100);
+    left: vw_p(75);
+    bottom: vw_p(75);
   }
 }

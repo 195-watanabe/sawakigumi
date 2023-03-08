@@ -12,15 +12,16 @@
 
   &_heading {
     position: relative;
+    padding-top: vw_p(48);
 
     h2 {
-      @include fzp(48);
+      @include fzp(40);
       font-weight: 600;
       margin-bottom: vw_p(18);
     }
     
     p {
-      @include fzp(24);
+      @include fzp(20);
       font-weight: 600;
     }
 
@@ -31,21 +32,22 @@
       width: vw_p(76);
       height: vw_p(3);
       background-color: $black;
-      top: vw_p(28);
-      left: vw_p(180);
+      top: vw_p(76);
+      left: vw_p(150);
     }
   }
 
   &_title {
-    @include fzp(24);
+    @include fzp(20);
     font-weight: 600;
     margin-top: vw_p(64);
   }
 
   &_txt {
-    @include fzp(16);
+    @include fzp(14);
     line-height: 2em;
     margin-top: vw_p(48);
+    margin-bottom: vw_p(64);
   }
 
   .btn_blue {

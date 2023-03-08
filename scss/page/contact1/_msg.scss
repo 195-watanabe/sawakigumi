@@ -1,8 +1,8 @@
 @use "../../global" as *;
 
 .msg {
-  padding: vw_p(80) vw_p(73) 0;
-  @include fzp(17);
+  padding: vw_p(48) vw_p(73) 0;
+  @include fzp(16);
   line-height: 2em;
   text-align: center;
 }

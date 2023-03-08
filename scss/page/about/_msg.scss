@@ -3,14 +3,15 @@
 .msg {
   position: relative;
   z-index: -1;
-  padding: vw_p(126) vw_p(123);
+  // padding: vw_p(126) vw_p(123);
+  padding: vw_p(80) vw_p(123) vw_p(100);
   background-color: $blue;
   color: $white;
   font-weight: 600;
   text-align: center;
 
   h2 {
-    @include fzp(38);
+    @include fzp(36);
   }
 
   &_sub {
@@ -21,7 +22,7 @@
   
   &_txt {
     text-align: left;
-    @include fzp(16);
+    @include fzp(14);
     font-weight: 400;
     line-height: 2.2em;
     margin-top: vw_p(60);
@@ -30,7 +31,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: vw_p(254);
+    top: vw_p(140);
     left: vw_p(-120);
     z-index: -1;
     width: vw_p(400);

@@ -43,8 +43,8 @@
 .fv_txt {
   position: absolute;
   z-index: 10;
-  left: vw_p(16);
-  top: vw_p(500);
+  left: vw_p(75);
+  bottom: vw_p(88);
   color: $white;
   font-family: $min;
   @include fzp(44);

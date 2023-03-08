@@ -1,14 +1,14 @@
 @use "../../global" as *;
 
 .saiyou {
-  padding: vw_p(48) vw_p(123) 0;
+  padding: 0 vw_p(123) vw_p(48);
   background-color: $white;
 
   &_msg {
 
     @include fzp(18);
     line-height: 2em;
-    margin-bottom: vw_p(100);
+    margin-bottom: vw_p(48);
   }
 
   &_nav {

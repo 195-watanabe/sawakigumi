@@ -23,13 +23,13 @@
     padding: vw_p(64) vw_p(114) vw_p(64) vw_p(32);
 
     h2 {
-      @include fzp(28);
+      @include fzp(24);
       font-weight: 600;
       margin-bottom: vw_p(48);
     }
 
     p {
-      @include fzp(15);
+      @include fzp(14);
       line-height: 2em;
       margin-bottom: vw_p(48);
     }

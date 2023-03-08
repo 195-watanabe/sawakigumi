@@ -9,10 +9,10 @@
   flex-wrap: wrap;
 
   li {
-    @include fzp(18);
+    @include fzp(16);
     color: $gray;
     padding-bottom: vw_p(24);
-    margin-right: vw_p(24);
+    margin-right: vw_p(32);
   }
 
   ._current {
@@ -27,7 +27,7 @@
       height: vw_p(1);
       background-color: $blue;
       left: 0;
-      bottom: vw_p(20);
+      bottom: vw_p(22);
     }
   }
 

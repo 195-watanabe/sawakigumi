@@ -1,16 +1,13 @@
-// // スムーススクロール
-// var scroll = new SmoothScroll('a[href*="#"]', {
-// speedAsDuration:true,
-// speed:1000,
-// easing:'easeInOutQuad' // イージング
-// });
 
-// ハンバーガーメニュー
-
-$(".openbtn").click(function () {//ボタンがクリックされたら
-  $(this).toggleClass('_active');//ボタン自身に activeクラスを付与し
-    $(".gnav").toggleClass('_active');//ナビゲーションに_activeクラスを付与
+/* ハンバーガーメニュー
+-----------------------------*/
+$(function () {
+  // チェックボックスをチェックしたら発動
+  $('.hamburger_btn').click(function () {
+    $("body").toggleClass("_fixed");
+  })
 });
+
 
 
 /* ナビゲーション

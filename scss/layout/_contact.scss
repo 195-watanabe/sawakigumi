@@ -32,7 +32,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: vw_p(209);
-    margin-top: vw_p(48);
+    margin-top: vw_p(80);
   }
   
   &_left {
@@ -49,21 +49,21 @@
       width: 100%;
       color: $white;
       text-align: center;
-      @include fzp(24);
+      @include fzp(18);
       font-weight: 600;
       line-height: 1.6em;
       transition: ease .2s;
 
       span {
-       @include fzp(48);
+       @include fzp(36);
       }
     }
 
     .contact_arrow {
       display: block;
-      width: vw_p(48);
-      height: vw_p(48);
-      margin-top: vw_p(18);
+      width: vw_p(42);
+      height: vw_p(42);
+      margin-top: vw_p(24);
       transition: ease .2s;
 
        &._hover {
@@ -87,7 +87,7 @@
 
     p {
       // color: $blue;
-      transform: scale( .9, .9);
+      // transform: scale( .9, .9);
 
       // span {
       //   color: $blue;
@@ -116,13 +116,13 @@
       width: 100%;
       color: $blue;
       text-align: center;
-      @include fzp(24);
+      @include fzp(18);
       font-weight: 600;
       line-height: 1.6em;
     }
 
     p:nth-child(2) {
-      margin-top: vw_p(32);
+      margin-top: vw_p(24);
     }
     
   }

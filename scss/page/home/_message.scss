@@ -36,14 +36,14 @@
     padding-left: vw_p(32);
 
     h3 {
-      @include fzp(24);
+      @include fzp(20);
       font-weight: 500;
       color: $blue;
       padding-top: vw_p(18);
     }
     
     p {
-      @include fzp(14);
+      @include fzp(12);
       font-weight: 500;
       color: $blue;
       padding-top: vw_p(8);

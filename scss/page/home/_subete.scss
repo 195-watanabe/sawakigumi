@@ -45,12 +45,12 @@
   color: $white;
   font-weight: 600;
   line-height: 1.8em;
-  letter-spacing: .12em;
+  // letter-spacing: .08em;
   text-align: center;
-  @include fzp(36);
+  @include fzp(32);
 
   span {
-    @include fzp(64);
+    @include fzp(56);
   }
 }
 

@@ -48,15 +48,15 @@
 }
 
 .msg {
-  padding: 6.25vw 5.703125vw 0;
-  font-size: 17px;
-  font-size: 1.328125vw;
+  padding: 3.75vw 5.703125vw 0;
+  font-size: 16px;
+  font-size: 1.25vw;
   line-height: 2em;
   text-align: center;
 }
 
 .tel {
-  padding: 6.25vw 17.890625vw 0;
+  padding: 3.75vw 17.890625vw 0;
 }
 .tel_wrap {
   display: grid;
@@ -96,7 +96,7 @@
 }
 
 .step {
-  padding: 7.8125vw 17.890625vw 6.25vw;
+  padding: 6.25vw 17.890625vw 6.25vw;
 }
 .step_wrap {
   width: 30.78125vw;

@@ -8,6 +8,10 @@
   width:100vw;
   overflow: hidden;
 
+  @include mq(tb) {
+    display: none;
+  }
+
   &_top {
     width: 100vw;
     display: flex;
@@ -27,19 +31,23 @@
   &_title {
     font-family: $min;
     color: $blue;
+    height: vw_p(72);
     font-weight: bold;
-    line-height: vw_p(80);
     @include fzp(16);
+    box-sizing: border-box;
     padding-left: vw_p(16);
-
+    line-height: vw_p(72);
+    
     @include mq(tb) {
-      line-height: vw_t(80);
       @include fzt(16);
       padding-left: vw_t(16);
+      line-height: vw_t(72);
     }
-
+    
     span {
+      box-sizing: border-box;
       @include fzp(24);
+      line-height: vw_p(72);
 
       @include mq(tb) {
         @include fzt(24);
@@ -55,13 +63,39 @@
     display: inline-flex;
     justify-content: space-between;
     width: vw_p(500);
-    margin-right: vw_p(32);
+    margin-right: vw_p(48);
 
     li {
+      position: relative;
+      overflow: hidden;
       @include fzp(14);
       letter-spacing: .08em;
       font-weight: 500;
-      line-height: vw_p(90);
+      line-height: vw_p(72);
+      color: $black;
+      transition: .2s all;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: vw_p(24);
+        width: 100%;
+        height: vw_p(1);
+        transform: translateX(-100%);
+        background-color: $blue;
+        transition: .2s all;
+      }
+      
+      &:hover {
+        color: $blue;
+        transition: .2s all;
+        
+        &::after {
+        transform: translateX(0%);
+        }
+      }
     }
 
     @include mq(tb) {
@@ -74,18 +108,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: vw_p(90);
-    height: vw_p(90);
+    width: vw_p(72);
+    height: vw_p(72);
     
     @include mq(tb) {
-      width: vw_t(90);
-      height: vw_t(90);
+      width: vw_t(72);
+      height: vw_t(72);
     }
     
     img {
       display: block;
-      width: vw_p(66);
-      height: vw_p(66);
+      width: vw_p(60);
+      height: vw_p(60);
 
       @include mq(tb) {
         width: vw_t(66);
@@ -98,13 +132,208 @@
 // ハンバーガーメニュー関連
 .hamburger {
   display: none;
+  // position: relative;
+  position: fixed;
+  box-sizing: border-box;
+  height: vw_t(72);
+  z-index: 200;
 
   @include mq(tb) {
-    position: relative;
-    display: block;
-    height: vw_t(90);
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .header_top {
+    transition: .4s ease;
+
+    .header_title {
+      transition: .4s ease;
+    }
+  }
+
+  &_btn {
+    position: fixed;
+    box-sizing: border-box;
+    top: vw_t(4);
+    right: vw_t(4);
+    display: flex;
+    height: vw_t(64);
+    width: vw_t(64);
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+    border: solid vw_t(2) $logo_blue;
+    border-radius: 50%;
+    color: $blue;
+    transition: .4s ease;
+    
+    p {
+      display: inline-block;
+      @include fzt(12);
+      font-weight: 500;
+      padding-top: vw_t(16);
+      transition: .4s ease;
+    }
+
+    .hamburger_close {
+      display: none;
+      color: $white;
+    }
+
+    span,
+    span:before,
+    span:after{
+      content: '';
+      display: block;
+      height: vw_t(2);
+      width: vw_t(36);
+      border-radius: vw_t(2);
+      background-color: rgba($color: #ffffff, $alpha: 0);
+      position: absolute;
+      margin-bottom: vw_t(24);
+      transition: .4s ease;
+    }
+
+    span:before {
+      background-color: $logo-blue;
+      top: vw_t(-3);
+    }
+    span:after {
+      background-color: $logo-blue;
+      top: vw_t(3);
+    }
+  }
+
+  &_menu {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: white;
+    left: 100%;
+    transition: .4s ease;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 vw_t(48);
+  }
+  
+  &_nav1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: solid vw_t(1) $black;
+    width: 100%;
+
+    li {
+      display: block;
+      width: 100%;
+      text-align: center;
+      @include fzt(20);
+      font-weight: 500;
+      padding:vw_t(36) 0;
+      border-bottom: solid vw_t(1) $black;
+
+      &._current {
+        color: $blue;
+      }
+    }
+  }
+  
+  &_nav2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: vw_t(48);
+
+    li {
+      box-sizing: border-box;
+      display: block;
+      width: vw_t(280);
+      text-align: center;
+      color: $blue;
+      @include fzt(20);
+      font-weight: 500;
+      padding:vw_t(22) 0;
+      border: solid vw_t(2) $blue;
+      border-radius: vw_t(36);
+
+      &:nth-child(2) {
+        margin-top: vw_t(28);
+        color: $white;
+        background-color: $blue;
+      }
+    }
   }
 }
+
+// ボタンクリック後
+body._fixed {
+  height: 100%;
+  position: fixed;
+}
+
+#hamburger-check:checked  ~ .hamburger_btn {
+  background-color: $logo-blue;
+  border-color: $white;
+
+  .header_top {
+    background-color: $logo-blue;
+  }
+
+  span:before {
+    top: 0;
+    height: vw_t(4);
+    transform: scale(.5, .5) rotate(135deg);
+    transition: .4s ease;
+    background-color: $white;
+  }
+
+  span:after {
+    top: 0;
+    height: vw_t(4);
+    transform: scale(.5, .5) rotate(-135deg);
+    transition: .4s ease;
+    background-color: $white;
+  }
+
+  .hamburger_open {
+    display: none;
+    transition: .4s ease;
+  }
+
+  .hamburger_close {
+    display: inline-block;
+    color: $white;
+    transition: .4s ease;
+  }
+}
+
+#hamburger-check:checked ~ .header_top {
+  background-color: $logo-blue;
+  transition: .4s ease;
+
+  .header_title {
+    color: $white;
+  }
+}
+
+#hamburger-check:checked ~ .hamburger_menu {
+  // position: fixed;
+  // width: 100%;
+  // height: 100%;
+  // z-index: -1;
+  // background-color: white;
+  left: 0;
+  transition: .4s ease;
+}
+
+
 
 .openbtn {
   position: fixed;
@@ -153,7 +382,4 @@
   display: none;
 }
 
-.hamburger._active {
-  
-}
 

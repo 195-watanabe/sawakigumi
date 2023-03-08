@@ -2,8 +2,8 @@
 
 .main {
   background: linear-gradient(90deg, $white 60%, $lGray 100%);
-  padding-top: vw_p(90);
-  padding-bottom: vw_p(128);
+  padding-top: vw_p(48);
+  padding-bottom: vw_p(80);
 
   &_wrap {
     display: flex;
@@ -17,17 +17,17 @@
     position: relative;
     display: inline-block;
     color: $blue;
-    @include fzp(22);
-    font-weight: 600;
-    padding-bottom: vw_p(36);
+    @include fzp(18);
+    font-weight: 500;
+    padding-bottom: vw_p(28);
 
     span {
-    @include fzp(36);
+    @include fzp(32);
     }
 
     &::after {
       position: absolute;
-      bottom: vw_p(32);
+      bottom: vw_p(24);
       content: "";
       display: block;
       width: 100%;
@@ -38,10 +38,10 @@
   }
 
   &_a {
-    @include fzp(17);
+    @include fzp(16);
     line-height: 2em;
     padding-left: vw_p(4);
-    padding-bottom: vw_p(84);
+    padding-bottom: vw_p(64);
   }
 
     &_btn {
@@ -49,10 +49,10 @@
       height: vw_p(64);
       background-color: $blue;
       color: $white;
-      @include fzp(19);
-      font-weight: 600;
+      @include fzp(18);
+      font-weight: 500;
       line-height: vw_p(64);
       text-align: center;
-      margin-top: vw_p(96);
+      margin-top: vw_p(24);
     }
 }

@@ -43,15 +43,15 @@
 .msg {
   position: relative;
   z-index: -1;
-  padding: 9.84375vw 9.609375vw;
+  padding: 6.25vw 9.609375vw 7.8125vw;
   background-color: #26329E;
   color: #ffffff;
   font-weight: 600;
   text-align: center;
 }
 .msg h2 {
-  font-size: 38px;
-  font-size: 2.96875vw;
+  font-size: 36px;
+  font-size: 2.8125vw;
 }
 .msg_sub {
   font-size: 18px;
@@ -61,8 +61,8 @@
 }
 .msg_txt {
   text-align: left;
-  font-size: 16px;
-  font-size: 1.25vw;
+  font-size: 14px;
+  font-size: 1.09375vw;
   font-weight: 400;
   line-height: 2.2em;
   margin-top: 4.6875vw;
@@ -70,7 +70,7 @@
 .msg::after {
   content: "";
   position: absolute;
-  top: 19.84375vw;
+  top: 10.9375vw;
   left: -9.375vw;
   z-index: -1;
   width: 31.25vw;
@@ -108,6 +108,7 @@
   width: 64.21875vw;
   height: 43.75vw;
   margin: 0 auto;
+  padding-bottom: 3.75vw;
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 50% 50%;
@@ -150,7 +151,7 @@
 
 .bumon {
   background-color: #eeeeee;
-  padding-top: 10vw;
+  padding-top: 6.25vw;
   padding-left: 6.953125vw;
 }
 .bumon_sec {
@@ -163,8 +164,8 @@
 .bumon_title {
   position: relative;
   writing-mode: vertical-rl;
-  font-size: 26px;
-  font-size: 2.03125vw;
+  font-size: 22px;
+  font-size: 1.71875vw;
   font-weight: 600;
   letter-spacing: 0.3em;
   margin-top: 3.75vw;
@@ -177,13 +178,13 @@
   height: 14.0625vw;
   background-color: #000000;
   left: 50%;
-  top: 11.71875vw;
+  top: 10.9375vw;
 }
 .bumon_title.kaiyoudoboku::before {
-  top: 16.40625vw;
+  top: 14.84375vw;
 }
 .bumon_title.kankouji::before {
-  top: 14.0625vw;
+  top: 12.5vw;
 }
 .bumon_txt {
   font-size: 16px;
@@ -206,8 +207,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 7.8125vw;
-  padding-bottom: 10vw;
+  padding-top: 6.25vw;
+  padding-bottom: 6.25vw;
   border-bottom: solid 0.078125vw #000000;
 }
 .strong h3 {
@@ -241,20 +242,21 @@
   background-color: #000000;
 }
 .strong_list {
-  margin-top: 7.8125vw;
+  margin-top: 6.25vw;
   width: 81.71875vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 .strong_item {
   position: relative;
   display: block;
-  width: 23.4375vw;
-  height: 23.4375vw;
+  width: 19.53125vw;
+  height: 19.53125vw;
   background-color: #ffffff;
   border: solid 0.15625vw #26329E;
   border-radius: 50%;
   padding: 0.46875vw;
+  margin: 0 1.5625vw;
 }
 .strong_circle {
   width: 100%;
@@ -266,8 +268,8 @@
   position: relative;
   color: #ffffff;
   text-align: center;
-  font-size: 48px;
-  font-size: 3.75vw;
+  font-size: 36px;
+  font-size: 2.8125vw;
   padding-top: 1.640625vw;
 }
 .strong h4::after {
@@ -275,9 +277,9 @@
   display: block;
   position: absolute;
   z-index: 2;
-  width: 6.25vw;
+  width: 5.625vw;
   height: 0.078125vw;
-  bottom: -0.15625vw;
+  bottom: -0.3125vw;
   left: 50%;
   transform: translateX(-50%);
   background-color: #ffffff;
@@ -285,10 +287,10 @@
 .strong p {
   color: #ffffff;
   text-align: center;
-  font-size: 17px;
-  font-size: 1.328125vw;
+  font-size: 14px;
+  font-size: 1.09375vw;
   line-height: 2em;
-  padding-top: 1.640625vw;
+  padding-top: 1.5625vw;
 }
 .strong ._long {
   padding-top: 0.78125vw;

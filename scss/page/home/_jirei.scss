@@ -8,21 +8,21 @@
   
   &_left {
     border-right: solid vw_p(3) $black;
-    padding: vw_p(64) vw_p(21) vw_p(57) vw_p(16);
+    padding: vw_p(80) vw_p(21) vw_p(57) vw_p(75);
 
     h2 {
-      @include fzp(28);
+      @include fzp(24);
       font-weight: 600;
       margin-bottom: vw_p(48);
     }
 
     p {
-      @include fzp(15);
+      @include fzp(14);
       line-height: 2em;
       margin-bottom: vw_p(48);
     }
 
-    button {
+    .btnblack {
       float: right;
     }
   }
@@ -32,10 +32,10 @@
     padding: vw_p(86) vw_p(123) vw_p(86) vw_p(74);
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: vw_p(40);
+    gap: vw_p(10);
 
     img {
-      width: vw_p(300);
+      width: vw_p(320);
       height: auto;
     }
   }

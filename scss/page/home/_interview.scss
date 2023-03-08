@@ -1,11 +1,12 @@
 @use "../../global" as *;
 
 .interview {
-  padding: vw_p(80) vw_p(123);
+  // padding: vw_p(80) vw_p(123);
+  padding: vw_p(80) vw_p(75);
   background-color: $lGray;
 
   .heading_c {
-    margin-bottom: vw_p(48);
+    margin-bottom: vw_p(80);
   }
 
   &_article {
@@ -16,8 +17,8 @@
     li {
       display: block;
       background-color: $white;
-      width: vw_p(334);
-      padding: vw_p(16) vw_p(8);
+      width: vw_p(368);
+      padding: vw_p(16) vw_p(16);
 
       img {
         width: 100%;
@@ -26,15 +27,15 @@
 
       h3 {
         @include fzp(16);
-        line-height: 2em;
-        font-weight: 600;
-        margin: vw_p(16) vw_p(7);
+        line-height: 1.6em;
+        font-weight: 500;
+        margin: vw_p(24) vw_p(7);
       }
 
       p {
-        @include fzp(16);
+        @include fzp(14);
         color: $blue;
-        font-weight: 600;
+        font-weight: 500;
         margin: 0 vw_p(7);
       }
     }
@@ -43,5 +44,6 @@
   &_wrap {
     display: flex;
     justify-content: center;
+    padding-top: vw_p(16);
   }
 }

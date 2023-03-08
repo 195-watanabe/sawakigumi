@@ -5,8 +5,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: vw_p(100);
-  padding-bottom: vw_p(128);
+  padding-top: vw_p(80);
+  padding-bottom: vw_p(80);
   border-bottom: solid vw_p(1) $black;
 
   h3 {
@@ -42,21 +42,22 @@
   }
 
   &_list {
-    margin-top: vw_p(100);
+    margin-top: vw_p(80);
     width: vw_p(1046);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   &_item {
     position: relative;
     display: block;
-    width: vw_p(300);
-    height: vw_p(300);
+    width: vw_p(250);
+    height: vw_p(250);
     background-color: $white;
     border: solid vw_p(2) $blue;
     border-radius: 50%;
     padding: vw_p(6);
+    margin: 0 vw_p(20);
   }
 
   &_circle {
@@ -70,7 +71,7 @@
     position: relative;
     color: $white;
     text-align: center;
-    @include fzp(48);
+    @include fzp(36);
     // font-weight: 600;
     padding-top: vw_p(21);
 
@@ -79,9 +80,9 @@
       display: block;
       position: absolute;
       z-index: 2;
-      width: vw_p(80);
+      width: vw_p(72);
       height: vw_p(1);
-      bottom: vw_p(-2);
+      bottom: vw_p(-4);
       left: 50%;
       transform: translateX(-50%);
       background-color: $white;
@@ -91,9 +92,9 @@
   p {
     color: $white;
     text-align: center;
-    @include fzp(17);
+    @include fzp(14);
     line-height: 2em;
-    padding-top: vw_p(21);
+    padding-top: vw_p(20);
   }
 
   ._long {

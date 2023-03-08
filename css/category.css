@@ -43,13 +43,13 @@
 .article {
   position: relative;
   overflow: hidden;
-  padding: 7.8125vw 9.609375vw;
+  padding: 6.25vw 9.609375vw;
   z-index: 1;
 }
 .article_msg {
-  font-size: 18px;
-  font-size: 1.40625vw;
-  padding-bottom: 7.8125vw;
+  font-size: 16px;
+  font-size: 1.25vw;
+  padding-bottom: 6.25vw;
 }
 .article_list {
   position: relative;
@@ -102,7 +102,7 @@
 .article_left {
   position: relative;
   display: inline-block;
-  padding: 1.5625vw 2.5vw;
+  padding: 1.09375vw 2.5vw;
   background-color: rgba(38, 50, 158, 0.7);
 }
 .article_left::before {
@@ -120,14 +120,14 @@
   color: #ffffff;
   font-size: 14px;
   font-size: 1.09375vw;
-  font-weight: 600;
-  margin-bottom: 0.78125vw;
+  font-weight: 500;
+  margin-bottom: 0.625vw;
 }
 .article_bumon {
   color: #ffffff;
-  font-size: 18px;
-  font-size: 1.40625vw;
-  font-weight: 600;
+  font-size: 14px;
+  font-size: 1.09375vw;
+  font-weight: 500;
 }
 .article_right {
   position: relative;
@@ -138,17 +138,17 @@
 }
 .article_name {
   color: #ffffff;
-  font-size: 24px;
-  font-size: 1.875vw;
-  font-weight: 600;
+  font-size: 18px;
+  font-size: 1.40625vw;
+  font-weight: 500;
 }
 .article_heading {
   display: block;
   width: 64.140625vw;
-  padding: 1.5625vw;
-  font-size: 20px;
-  font-size: 1.5625vw;
-  font-weight: 600;
+  padding: 1.5625vw 2.5vw;
+  font-size: 18px;
+  font-size: 1.40625vw;
+  font-weight: 500;
   line-height: 2em;
   background-color: rgba(255, 255, 255, 0.7);
 }

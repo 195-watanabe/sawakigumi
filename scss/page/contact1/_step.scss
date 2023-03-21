@@ -3,14 +3,38 @@
 .step {
   padding: vw_p(80) vw_p(229) vw_p(80);
 
+  @include mq(tb) {
+    padding: vw_t(48) vw_t(222) vw_t(32);
+  }
+
+  @include mq(sp) {
+    padding: vw_s(32) vw_s(57) vw_s(32);
+  }
+  
   &_wrap {
     width: vw_p(394);
     margin: 0 auto;
     display: flex;
+    
+    @include mq(tb) {
+      width: vw_t(322);
+    }
+    
+    @include mq(sp) {
+      width: vw_s(246);
+    }
   }
 
   &_1,&_2,&_3 {
     width: vw_p(64);
+    
+    @include mq(tb) {
+      width: vw_t(52);
+    }
+    
+    @include mq(sp) {
+      width: vw_s(40);
+    }
   }
 
   &_circle {
@@ -25,6 +49,22 @@
     @include fzp(24);
     text-align: center;
     
+    @include mq(tb) {
+      width: vw_t(52);
+      height: vw_t(52);
+      line-height: vw_t(46);
+      border: solid vw_t(2) $blue;
+      @include fzt(20);
+    }
+    
+    @include mq(sp) {
+      width: vw_s(40);
+      height: vw_s(40);
+      line-height: vw_s(36);
+      border: solid vw_s(1) $blue;
+      @include fzs(15);
+    }
+    
     &._current {
       background-color: $blue;
       color: $white;
@@ -36,7 +76,17 @@
     color: $gray;
     text-align: center; 
     @include fzp(16);
-    font-weight: 600;
+    font-weight: 500;
+    
+    @include mq(tb) {
+      margin-top: vw_t(13);
+      @include fzt(13);
+    }
+    
+    @include mq(sp) {
+      margin-top: vw_s(8);
+      @include fzs(11);
+    }
 
     &._current {
       color: $blue;
@@ -48,5 +98,17 @@
     width: vw_p(60);
     height: vw_p(1);
     background-color: $blue;
+    
+    @include mq(tb) {
+      margin: vw_t(26) vw_t(16) vw_t(59);
+      width: vw_t(49);
+      height: vw_t(1);
+    }
+    
+    @include mq(sp) {
+      margin: vw_s(21) vw_s(12) vw_s(0);
+      width: vw_s(38);
+      height: vw_s(1);
+    }
   }
 }

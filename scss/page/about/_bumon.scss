@@ -4,23 +4,53 @@
   background-color: $lGray;
   padding-top: vw_p(80);
   padding-left: vw_p(89);
+  
+  @include mq(tb) {
+    padding-top: vw_t(88);
+    padding-left: vw_t(16);
+  }
 
+  @include mq(sp) {
+    padding-top: vw_s(64);
+    margin-top: vw_s(-16);
+    padding-left: vw_s(0);
+  }
+  
   &_sec {
     display: flex;
     background-color: $white;
     padding-left: vw_p(32);
     padding-right: vw_p(16);
     padding-bottom: vw_p(48);
+
+    @include mq(tb) {
+      padding: vw_t(20) vw_t(0) vw_t(48) vw_t(20);
+    }
+
+    @include mq(sp) {
+      padding: vw_s(16) vw_s(16) vw_s(48);
+      flex-wrap: wrap;
+    }
   }
 
   &_title {
     position: relative;
     writing-mode: vertical-rl;
     @include fzp(22);
-    font-weight: 600;
-    letter-spacing: .3em;
+    font-weight: 500;
+    letter-spacing: .24em;
     margin-top: vw_p(48);
+    
+    @include mq(tb) {
+      @include fzt(20);
+      margin-top: vw_t(0);
+    }
 
+    @include mq(sp) {
+      @include fzs(16);
+      margin-top: vw_s(0);
+    }
+    
     &::before {
       content: "";
       position: absolute;
@@ -30,14 +60,42 @@
       background-color: $black;
       left: 50%;
       top: vw_p(140);
+      
+      @include mq(tb) {
+        width: vw_t(1);
+        height: vw_t(110);
+        top: vw_t(110);
+      }
+
+      @include mq(sp) {
+        width: vw_s(1);
+        height: vw_s(54);
+        top: vw_s(90);
+      }
     }
 
     &.kaiyoudoboku::before {
       top: vw_p(190);
+      
+      @include mq(tb) {
+        top: vw_t(160);
+      }
+      
+      @include mq(sp) {
+        top: vw_s(130);
+      }
     }
-
+    
     &.kankouji::before {
       top: vw_p(160);
+      
+      @include mq(tb) {
+        top: vw_t(134);
+      }
+      
+      @include mq(sp) {
+        top: vw_s(110);
+      }
     }
   }
 
@@ -47,13 +105,49 @@
     width: vw_p(427);
     margin-top: vw_p(80);
     margin-left: vw_p(50);
-  }
+    
+    @include mq(tb) {
+      @include fzt(13);
+      width: vw_t(280);
+      margin-top: vw_t(20);
+      margin-left: vw_t(32);
+    }
 
+    @include mq(sp) {
+      display: none;
+    }
+    
+    &._sp {
+      display: none;
+      
+      @include mq(sp) {
+        display: block;
+        @include fzs(14);
+        width: 100%;
+        line-height: 2em;
+        margin-top: vw_s(24);
+        margin-left: vw_s(0);
+      }
+    }
+  }
+  
   &_img {
     display: block;
     margin-top: vw_p(48);
     margin-left: vw_p(48);
     width: vw_p(598);
     height: auto;
+
+    @include mq(tb) {
+      width: vw_t(370);
+      margin-top: vw_t(20);
+      margin-left: vw_t(32);
+    }
+
+    @include mq(sp) {
+      width: vw_s(287);
+      margin-top: vw_s(0);
+      margin-left: vw_s(22);
+    }
   }
 }

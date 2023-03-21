@@ -8,12 +8,42 @@
   background-size: cover;
   // background-attachment: fixed;
 
+  @include mq(tb) {
+    height: vw_t(408);
+  }
+
+  @include mq(sp) {
+    height: vw_s(480);
+    background-position: 64%, 50%;
+  }
+
   &_heading {
     position: absolute;
     color: $white;
+    font-weight: 500;
     @include fzp(48);
-    font-weight: 600;
     left: vw_p(75);
     bottom: vw_p(75);
+    
+    @include mq(tb) {
+      @include fzt(32);
+      left: vw_t(16);
+      bottom: vw_t(96);
+    }
+    
+    @include mq(sp) {
+      @include fzs(28);
+      line-height: 1.6em;
+      left: vw_s(16);
+      bottom: vw_s(185);
+    }
+
+    span {
+      display: none;
+
+      @include mq(sp) {
+        display: inline;
+      }
+    }
   }
 }

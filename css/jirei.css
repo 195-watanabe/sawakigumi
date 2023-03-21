@@ -48,12 +48,39 @@
   justify-content: space-between;
   flex-wrap: wrap;
 }
+@media screen and (max-width: 960px) {
+  .category {
+    padding: 6.25vw 2.0833333333vw 0 5.2083333333vw;
+  }
+}
+@media screen and (max-width: 520px) {
+  .category {
+    justify-content: left;
+    padding: 8.8888888889vw 4.4444444444vw 0 8.0555555556vw;
+  }
+}
 .category li {
   font-size: 16px;
   font-size: 1.25vw;
   color: #67635F;
   padding-bottom: 1.875vw;
   margin-right: 2.5vw;
+}
+@media screen and (max-width: 960px) {
+  .category li {
+    font-size: 14px;
+    font-size: 1.8229166667vw;
+    padding-bottom: 2.34375vw;
+    margin-right: 1.3020833333vw;
+  }
+}
+@media screen and (max-width: 520px) {
+  .category li {
+    font-size: 14px;
+    font-size: 3.8888888889vw;
+    padding-bottom: 3.8888888889vw;
+    margin-right: 4.4444444444vw;
+  }
 }
 .category ._current {
   position: relative;
@@ -64,10 +91,22 @@
   content: "";
   display: block;
   width: 100%;
-  height: 0.078125vw;
   background-color: #26329E;
   left: 0;
+  height: 0.078125vw;
   bottom: 1.71875vw;
+}
+@media screen and (max-width: 960px) {
+  .category ._current::before {
+    height: 0.1302083333vw;
+    bottom: 1.953125vw;
+  }
+}
+@media screen and (max-width: 520px) {
+  .category ._current::before {
+    height: 0.2777777778vw;
+    bottom: 3.0555555556vw;
+  }
 }
 .category::before {
   position: absolute;
@@ -79,6 +118,22 @@
   top: 5.3125vw;
   left: 7.03125vw;
 }
+@media screen and (max-width: 960px) {
+  .category::before {
+    top: 5.7291666667vw;
+    left: 2.0833333333vw;
+    width: 0.5208333333vw;
+    height: 7.8125vw;
+  }
+}
+@media screen and (max-width: 520px) {
+  .category::before {
+    top: 8.8888888889vw;
+    left: 4.4444444444vw;
+    width: 0.5555555556vw;
+    height: 47.2222222222vw;
+  }
+}
 
 .pic {
   position: relative;
@@ -89,15 +144,50 @@
   justify-content: space-between;
   gap: 2.578125vw;
 }
+@media screen and (max-width: 960px) {
+  .pic {
+    padding: 3.90625vw 5.2083333333vw 6.25vw;
+    gap: 4.1666666667vw;
+  }
+}
+@media screen and (max-width: 520px) {
+  .pic {
+    padding: 6.6666666667vw 4.4444444444vw 8.8888888889vw;
+    gap: 8.8888888889vw;
+  }
+}
 .pic li {
   width: 25vw;
   margin-top: 3.515625vw;
+}
+@media screen and (max-width: 960px) {
+  .pic li {
+    width: 41.6666666667vw;
+  }
+}
+@media screen and (max-width: 520px) {
+  .pic li {
+    width: 91.1111111111vw;
+    margin-top: 0;
+  }
 }
 .pic li img {
   width: 25vw;
   height: 16.640625vw;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media screen and (max-width: 960px) {
+  .pic li img {
+    width: 41.6666666667vw;
+    height: 27.734375vw;
+  }
+}
+@media screen and (max-width: 520px) {
+  .pic li img {
+    width: 91.1111111111vw;
+    height: 60.5555555556vw;
+  }
 }
 .pic li h3 {
   margin-top: 1.25vw;
@@ -106,21 +196,67 @@
   font-weight: 500;
   line-height: 1.6em;
 }
+@media screen and (max-width: 960px) {
+  .pic li h3 {
+    margin-top: 1.3020833333vw;
+    font-size: 14px;
+    font-size: 1.8229166667vw;
+  }
+}
+@media screen and (max-width: 520px) {
+  .pic li h3 {
+    margin-top: 2.2222222222vw;
+    font-size: 14px;
+    font-size: 3.8888888889vw;
+  }
+}
 
 .pager {
   display: flex;
   justify-content: center;
   padding-bottom: 6.25vw;
 }
+@media screen and (max-width: 960px) {
+  .pager {
+    padding-bottom: 6.25vw;
+  }
+}
+@media screen and (max-width: 520px) {
+  .pager {
+    padding-bottom: 13.3333333333vw;
+  }
+}
 .pager li {
+  text-align: center;
   width: 3.75vw;
   height: 3.359375vw;
   line-height: 3.359375vw;
-  text-align: center;
   font-size: 20px;
   font-size: 1.5625vw;
   border: solid 0.078125vw #000000;
   margin-left: 0.78125vw;
+}
+@media screen and (max-width: 960px) {
+  .pager li {
+    width: 5.5989583333vw;
+    height: 4.5572916667vw;
+    line-height: 3.90625vw;
+    font-size: 16px;
+    font-size: 2.0833333333vw;
+    border-width: 0.1302083333vw;
+    margin-left: 0.78125vw;
+  }
+}
+@media screen and (max-width: 520px) {
+  .pager li {
+    width: 10vw;
+    height: 8.3333333333vw;
+    line-height: 7.2222222222vw;
+    font-size: 14px;
+    font-size: 3.8888888889vw;
+    border-width: 0.2777777778vw;
+    margin-left: 1.6666666667vw;
+  }
 }
 .pager .pre {
   position: relative;

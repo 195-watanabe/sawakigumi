@@ -3,20 +3,54 @@
 .about {
   padding: vw_p(56) vw_p(131);
   background-color: $blue;
+  
+  @include mq(tb) {
+    padding: vw_t(48) vw_t(120);
+  }
+  
+  @include mq(sp) {
+    padding: vw_s(48) vw_s(16);
+  }
 
   h3 {
     color: $white;
     @include fzp(28);
-    font-weight: 600;
+    font-weight: 500;
     text-align: center;
 
+    @include mq(tb) {
+      @include fzt(24);
+    }
+
+    @include mq(sp) {
+      @include fzs(20);
+    }
   }
   
   p {
     color: $white;
+    font-weight: 400;
     @include fzp(16);
     text-align: center;
     line-height: 2em;
     margin-top: vw_p(32);
+
+    span {
+      display: none;
+
+      @include mq(sp) {
+        display: inline;
+      }
+    }
+    
+    @include mq(tb) {
+      @include fzt(16);
+      margin-top: vw_t(32);
+    }
+    
+    @include mq(sp) {
+      @include fzs(14);
+      margin-top: vw_s(24);
+    }
   }
 }

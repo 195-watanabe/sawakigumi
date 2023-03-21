@@ -4,6 +4,7 @@
   background-color: transparent;
   position: relative;
   overflow: hidden;
+
 }
 
 .subete::before {
@@ -14,10 +15,10 @@
   top: 0;
   left: 0;
   width: 100vw;
-  // height: vw_p(680);
   height: 100%;
   clip-path: polygon(50% 100%, 0% 0%, 100% 0%, 100% 100%);
   background-color: $blue;
+
 }
 
 .subete::after {
@@ -30,6 +31,10 @@
   width: vw_p(3);
   height: 30%;
   background-color: $white;
+  
+  @include mq(tb) {
+    display: none;
+  }
 }
 
 .subete_wrapper {
@@ -38,24 +43,62 @@
   justify-content: center;
   align-items: center;
   padding: vw_p(64) 0;
+  
+  @include mq(tb) {
+    padding: vw_t(48) 0 vw_t(80);
+  }
+  
+  @include mq(sp) {
+    padding: vw_s(32) 0 vw_s(48);
+  }
 }
 
 .subete_heading {
   z-index: 1;
   color: $white;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.8em;
   // letter-spacing: .08em;
   text-align: center;
-  @include fzp(32);
+  @include fzp(28);
 
+  @include mq(tb) {
+    line-height: 1.4em;
+    @include fzt(28);
+  }
+
+  @include mq(sp) {
+    @include fzs(20);
+  }
+  
   span {
+    font-weight: 700;
     @include fzp(56);
+    
+    @include mq(tb) {
+      @include fzt(48);
+    }
+
+    @include mq(sp) {
+      @include fzs(36);
+    }
   }
 }
 
 .subete_video{
   margin-top: vw_p(32);
-  width: vw_p(660);
-  height: vw_p(400);
+  width: vw_p(664);
+  height: vw_p(398);
+  
+  @include mq(tb) {
+    width: vw_t(608);
+    height: vw_t(340);
+    margin-top: vw_t(48);
+  }
+
+  @include mq(sp) {
+    width: vw_s(328);
+    height: vw_s(180);
+    margin-top: vw_s(20);
+  }
 }

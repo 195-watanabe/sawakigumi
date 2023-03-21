@@ -7,24 +7,67 @@
   background-color: $blue;
   padding: vw_p(100) vw_p(123) vw_p(104) vw_p(123);
 
+  @include mq(tb) {
+    padding: vw_t(48) vw_t(16) vw_t(100);
+  }
+  
+  @include mq(sp) {
+    padding: vw_s(32) vw_s(16) vw_s(64);
+  }
+
   .heading_c {
     color: $white;
     margin-bottom: vw_p(64);
+    
+    @include mq(tb) {
+      margin-bottom: vw_t(48);
+    }
+
+    @include mq(sp) {
+      margin-bottom: vw_s(32);
+    }
   }
 
   &_txt {
     @include fzp(16);
     line-height: 2em;
     margin-bottom: vw_p(100);
-  }
 
+    @include mq(tb) {
+      @include fzt(14);
+      margin-bottom: vw_t(64);
+    }
+    
+    @include mq(sp) {
+      @include fzs(14);
+      margin-bottom: vw_s(48);
+    }
+  }
+  
   &_link {
     display: flex;
     justify-content: space-between;
     padding: 0 vw_p(76);
-
+    
+    @include mq(tb) {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    @include mq(sp) {
+      padding: 0;
+    }
+    
     a {
       z-index: 10;
+
+      @include mq(tb) {
+        margin: 0 0 vw_t(32) 0;
+      }
+
+      @include mq(sp) {
+        margin: 0 0 vw_s(32) 0;
+      }
     }
   }
 
@@ -34,12 +77,36 @@
     width: vw_p(400);
     height: vw_p(114);
     padding-left: vw_p(32);
+    
+    @include mq(tb) {
+      width: vw_t(352);
+      height: vw_t(100);
+      padding-left: vw_t(28);
+      margin: 0 0 vw_t(0) 0;
+    }
+    
+    @include mq(sp) {
+      width: vw_s(328);
+      height: vw_s(93);
+      padding-left: vw_s(27);
+      margin: 0 0 vw_s(0) 0;
+    }
 
     h3 {
       @include fzp(20);
       font-weight: 500;
       color: $blue;
       padding-top: vw_p(18);
+      
+      @include mq(tb) {
+        @include fzt(18);
+        padding-top: vw_t(16);
+      }
+
+      @include mq(sp) {
+        @include fzs(18);
+        padding-top: vw_s(16);
+      }
     }
     
     p {
@@ -47,6 +114,16 @@
       font-weight: 500;
       color: $blue;
       padding-top: vw_p(8);
+      
+      @include mq(tb) {
+        @include fzt(12);
+        padding-top: vw_t(10);
+      }
+
+      @include mq(sp) {
+        @include fzs(12);
+        padding-top: vw_s(9);
+      }
     }
 
     &._left::after {
@@ -85,6 +162,19 @@
     bottom: vw_p(-44);
     right: vw_p(4);
     @include fzp(180);
-    font-weight: 600;
+    font-weight: 700;
+    
+    @include mq(tb) {
+      @include fzt(108);
+      bottom: vw_t(-20);
+      right: vw_t(8);
+    }
+
+    @include mq(sp) {
+      @include fzs(100);
+      bottom: vw_s(-14);
+      right: vw_s(2);
+      opacity: .5;
+    }
   }
 }

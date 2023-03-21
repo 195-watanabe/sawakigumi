@@ -1,0 +1,33 @@
+@use "../global" as *;
+
+// 真ん中にくるheading
+.heading_c {
+  font-weight: 600;
+  
+  h2 {
+    text-align: center;
+    @include fzp(48);
+    padding-bottom: vw_p(18);
+  }
+
+  p {
+    text-align: center;
+    @include fzp(24);
+  }
+}
+
+// 左寄せのheading
+.heading_l {
+  font-weight: 600;
+
+  h2 {
+    @include fzp(30);
+    color: $black;
+    padding-bottom: vw_p(8);
+  }
+
+  p {
+    @include fzp(18);
+    color: $blue;
+  }
+}

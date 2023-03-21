@@ -3,77 +3,206 @@
 .footer {
   background-color: $dGray;
   padding: vw_p(48) vw_p(16) 0 vw_p(16);
+  
+  @include mq(tb) {
+    padding: vw_t(32) vw_t(16);
+  }
+  
+  @include mq(sp) {
+    padding: vw_s(32) vw_s(16) vw_s(8);
+  }
 
   &_wrap {
     display: flex;
-  }
 
+    @include mq(tb) {
+      flex-wrap: wrap;
+    }
+  }
+  
   &_logo {
     display: block;
     width: vw_p(64);
     height: vw_p(64);
+    
+    @include mq(tb) {
+      display: inline-block;
+      width: vw_t(48);
+      height: vw_t(48);
+    }
+    
+    @include mq(sp) {
+      width: vw_s(48);
+      height: vw_s(48);
+    }
   }
-
+  
   &_company {
     height: vw_p(202);
     color: $white;
     @include fzp(17);
     font-family: $min;
-    font-weight: 600;
+    font-weight: 500;
     padding-top: vw_p(16);
     padding-left: vw_p(32);
     padding-right: vw_p(192);
     border-right: solid vw_p(1) $white;
+    
+    @include mq(tb) {
+      display: block;
+      @include fzt(12);
+      width: vw_t(670);
+      height: vw_t(48);
+      line-height: vw_t(48);
+      padding: vw_t(0) vw_t(20);
+      border: none;
+    }
+    
+    @include mq(sp) {
+      @include fzs(12);
+      width: vw_s(200);
+      height: vw_s(48);
+      line-height: vw_s(48);
+      padding: vw_s(0) vw_s(16);
+    }
+    
+    span {
+      @include fzp(28);
 
-      span {
-        @include fzp(28);
+      @include mq(tb) {
+        @include fzt(24);
       }
+
+      @include mq(sp) {
+        @include fzs(20);
+      }
+    }
   }
 
   &_right {
     display: flex;
-  }
 
+    @include mq(tb) {
+      width: 100%;
+      margin-top: vw_t(24);
+      padding-bottom: vw_t(48);
+      border-bottom: solid vw_t(1) $white;
+    }
+    
+    @include mq(sp) {
+      flex-direction: column;
+      margin-top: vw_s(32);
+      padding-bottom: vw_s(32);
+    }
+  }
+  
   &_honsya {
     color: $white;
-    padding-left: vw_p(38) ;
+    padding-left: vw_p(38);
+
+    @include mq(tb) {
+      padding-left: vw_t(48);
+    }
+
+    @include mq(sp) {
+      padding-left: 0;
+    }
     
     h3 {
       margin-top: vw_p(18);
       margin-bottom: vw_p(18);
       @include fzp(16);
-      font-weight: 600;
-    }
+      font-weight: 500;
 
+      @include mq(tb) {
+        margin-top: vw_t(0);
+        margin-bottom: vw_t(8);
+        @include fzt(16);
+      }
+
+      @include mq(sp) {
+        margin-bottom: vw_s(16);
+        @include fzs(16);
+      }
+    }
+    
     p {
       @include fzp(12);
       font-weight: 400;
       line-height: 2em;
+      
+      @include mq(tb) {
+        @include fzt(12);
+      }
+
+      @include mq(sp) {
+        @include fzs(12);
+      }
     }
   }
-
+  
   &_shiten {
     color: $white;
     padding-left: vw_p(100) ;
     
+    @include mq(tb) {
+      padding-left: vw_t(100) ;
+    }
+
+    @include mq(sp) {
+      padding-left: 0;
+      margin-top: vw_s(32);
+    }
+
     h3 {
       margin-top: vw_p(18);
       margin-bottom: vw_p(18);
       @include fzp(16);
-      font-weight: 600;
+      font-weight: 500;
+      
+      @include mq(tb) {
+        margin-top: vw_t(0);
+        margin-bottom: vw_t(8);
+        @include fzt(16);
+      }
+
+      @include mq(sp) {
+        margin-bottom: vw_s(16);
+        @include fzs(16);
+      }
     }
 
     p {
       @include fzp(12);
       font-weight: 400;
       line-height: 2em;
+
+      @include mq(tb) {
+        @include fzt(12);
+      }
+
+      @include mq(sp) {
+        @include fzs(12);
+      }
     }
   }
-
+  
   &_copyright{
     color: $white;
     @include fzp(10);
-    // font-weight: 600;
+    // font-weight: 500;
     padding: vw_p(18) vw_p(16);
+
+    @include mq(tb) {
+      @include fzt(10);
+      padding: vw_t(28) 0 0;
+      text-align: center;
+    }
+
+    @include mq(sp) {
+      @include fzs(10);
+      padding: vw_s(8) 0 0;
+      text-align: center;
+    }
   }
 }

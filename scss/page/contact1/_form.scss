@@ -4,6 +4,14 @@
   position: relative;
   padding: vw_p(0) vw_p(229) vw_p(126);
 
+  @include mq(tb) {
+    padding: vw_t(0) vw_t(48) vw_t(64);
+  }
+
+  @include mq(sp) {
+    padding: vw_s(0) vw_s(16) vw_s(16);
+  }
+  
   &_wrap {
     display: flex;
     flex-direction: column;
@@ -11,50 +19,100 @@
     justify-content: space-between;
     padding: vw_p(80) vw_p(107) vw_p(80);
     background-color: $white;
-  }
 
+    @include mq(tb) {
+      padding: vw_t(48) vw_t(64) vw_t(48);
+    }
+
+    @include mq(sp) {
+      padding: vw_s(32) vw_s(28) vw_s(32);
+    }
+  }
+  
   form {
     position: relative;
   }
-
+  
   &_row {
     width: 100%;
     height: vw_p(43);
     margin-bottom: vw_p(36);
     
+    @include mq(tb) {
+      height: vw_t(38);
+      margin-bottom: vw_t(32);
+    }
+    
+    @include mq(sp) {
+      // height: vw_s(38);
+      height: auto;
+      margin-bottom: vw_s(16);
+    }
+    
     label {
       display: flex;
+      
+      @include mq(sp) {
+        flex-direction: column;
+      }
     }
     
     &._textarea {
       height: auto;
       margin: 0;
-
+      
       label {
         align-items: start;
       }
     }
   }
-
+  
   &_label {
     display: inline-block;
     width: vw_p(251);
     @include fzp(16);
     line-height: vw_p(43);
-
+    
+    @include mq(tb) {
+      width: vw_t(224);
+      @include fzt(14);
+      line-height: vw_t(40);
+    }
+    
+    @include mq(sp) {
+      display: block;
+      width: 100%;
+      @include fzs(12);
+      line-height: vw_s(36);
+    }
+    
     span {
       color: red;
     }
   }
-
+  
   input {
     box-sizing: border-box;
     width: vw_p(353);
     padding: vw_p(12);
     border: solid vw_p(1) $gray;
     color: $gray;
+    
+    @include mq(tb) {
+      width: vw_t(322);
+      padding: vw_t(10);
+      border: solid vw_t(1) $gray;
+    }
+    
+    @include mq(sp) {
+      display: block;
+      width: 100%;
+      @include fzs(12);
+      padding: vw_s(8);
+      border: solid vw_s(1) $gray;
+    }
   }
-
+  
   textarea {
     box-sizing: border-box;
     width: vw_p(353);
@@ -62,17 +120,43 @@
     border: solid vw_p(1) $gray;
     color: $gray;
     line-height: 1.6em;
+    
+    @include mq(tb) {
+      width: vw_t(322);
+      padding: vw_t(10);
+      border: solid vw_t(1) $gray;
+    }
+    
+    @include mq(sp) {
+      display: block;
+      width: 100%;
+      @include fzs(12);
+      padding: vw_s(8);
+      border: solid vw_s(1) $gray;
+    }
   }
-
+  
   &_btn {
     display: inline-block;
-    padding: vw_p(16) vw_p(64);
     background: $blue;
+    padding: vw_p(16) vw_p(64);
     margin-top: vw_p(80);
+    
+    @include mq(tb) {
+      @include fzt(14);
+      padding: vw_t(14) vw_t(56);
+      margin-top: vw_t(48);
+    }
+    
+    @include mq(sp) {
+      @include fzs(12);
+      padding: vw_s(12) vw_s(48);
+      margin-top: vw_s(32);
+    }
 
     a {
       color: $white;
-      font-weight: 600;
+      font-weight: 500;
     }
   } 
 
@@ -82,6 +166,18 @@
     border: none;
     color: $gray;
     line-height: 1.6em;
+
+    @include mq(tb) {
+      @include fzt(14);
+      width: vw_t(322);
+      padding: vw_t(10);
+    }
+
+    @include mq(sp) {
+      @include fzs(12);
+      width: 100%;
+      padding: vw_s(8) 0;
+    }
   }
 }
 

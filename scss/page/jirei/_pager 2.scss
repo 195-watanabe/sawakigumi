@@ -4,41 +4,15 @@
   display: flex;
   justify-content: center;
   padding-bottom: vw_p(80);
-  
-  @include mq(tb) {
-    padding-bottom: vw_t(48);
-  }
-  
-  @include mq(sp) {
-    padding-bottom: vw_s(48);
-  }
-  
+
   li {
-    text-align: center;
     width: vw_p(48);
     height: vw_p(43);
     line-height: vw_p(43);
+    text-align: center;
     @include fzp(20);
     border: solid vw_p(1) $black;
     margin-left: vw_p(10);
-    
-    @include mq(tb) {
-      width: vw_t(43);
-      height: vw_t(35);
-      line-height: vw_t(30);
-      @include fzt(16);
-      border-width: vw_t(1);
-      margin-left: vw_t(6);
-    }
-
-    @include mq(sp) {
-      width: vw_s(36);
-      height: vw_s(30);
-      line-height: vw_s(26);
-      @include fzs(14);
-      border-width: vw_s(1);
-      margin-left: vw_s(6);
-    }
   }
 
   .pre {

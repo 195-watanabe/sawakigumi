@@ -5,4 +5,15 @@
   @include fzp(16);
   line-height: 2em;
   text-align: center;
+  
+  @include mq(tb) {
+    padding: vw_t(32) vw_t(16) 0;
+    @include fzt(14);
+  }
+  
+  @include mq(sp) {
+    text-align: left;
+    padding: vw_s(32) vw_s(16) 0;
+    @include fzs(12);
+  }
 }

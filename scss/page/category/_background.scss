@@ -13,6 +13,10 @@
     height: vw_p(640);
     margin-left: vw_p(800);
     margin-bottom: vw_p(0);
+
+    @include mq(sp) {
+      display: none;
+    }
   }
 
   li:nth-child(even) {

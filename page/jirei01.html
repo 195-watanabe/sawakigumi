@@ -72,22 +72,50 @@
     </ul>
   </div>
 </header>
-  <header class="hamburger">
-    <div class="openbtn">
-      <span></span><span></span><span></span>
-    </div>
-    <nav class="gnav">
+  <header class="hamburger" id="hamburger">
+    <input type="checkbox" id="hamburger-check">
+    <label for="hamburger-check" class="hamburger_btn">
+      <span></span>
+      <p class="hamburger_open">MENU</p>
+      <p class="hamburger_close">CLOSE</p>
+    </label>
+    <div class="header_top">
       <a href="home.html">
-        
+        <p class="header_title">
+          株式会社　<span>沢木組</span>
+        </p>
       </a>
-      <ul class="list">
-        <li class="list_item"><a href="about.html">ABOUT US</a></li>
-        <li class="list_item"><a href="service.html">SERVICE</a></li>
-        <li class="list_item"><a href="works.html">WORKS</a></li>
-        <li class="list_item"><a href="topics.html">TOPICS</a></li>
-        <li class="list_item"><a href="contact.html">CONTACT</a></li>
+      <a href="home.html" class="header_logo">
+        <img src="../img/logo-icon-b.png" alt="ロゴ画像です">
+      </a>
+    </div>
+    <div class="hamburger_menu">
+      <ul class="hamburger_nav1">
+        <li>
+          <a href="home.html">TOP</a>
+        </li>
+        <li>
+          <a href="about.html">沢木組を知る</a>
+        </li>
+        <li class="_current">
+          <a href="jirei01.html">事例紹介</a>
+        </li>
+        <li>
+          <a href="category.html">先輩社員の声</a>
+        </li>
+        <li>
+          <a href="company.html">企業情報</a>
+        </li>
       </ul>
-    </nav>
+      <ul class="hamburger_nav2">
+        <li>
+          <a href="recruit.html">採用について</a>
+        </li>
+        <li>
+          <a href="contact1.html">お問い合わせ</a>
+        </li>
+      </ul>
+    </div>
   </header>
   <main>
     <div class="breadcrumbs">

@@ -20,10 +20,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
-  href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+  href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap"
   rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="../css/reset.css">
-</link>
 <link rel="stylesheet" type="text/css" href="../css/style.css">
 </link>
 <link rel="stylesheet" type="text/css" href="../css/recruit.css">
@@ -72,22 +70,50 @@
     </ul>
   </div>
 </header>
-<header class="hamburger">
-  <div class="openbtn">
-    <span></span><span></span><span></span>
-  </div>
-  <nav class="gnav">
+<header class="hamburger" id="hamburger">
+  <input type="checkbox" id="hamburger-check">
+  <label for="hamburger-check" class="hamburger_btn">
+    <span></span>
+    <p class="hamburger_open">MENU</p>
+    <p class="hamburger_close">CLOSE</p>
+  </label>
+  <div class="header_top">
     <a href="home.html">
-      
+      <p class="header_title">
+        株式会社　<span>沢木組</span>
+      </p>
     </a>
-    <ul class="list">
-      <li class="list_item"><a href="about.html">ABOUT US</a></li>
-      <li class="list_item"><a href="service.html">SERVICE</a></li>
-      <li class="list_item"><a href="works.html">WORKS</a></li>
-      <li class="list_item"><a href="topics.html">TOPICS</a></li>
-      <li class="list_item"><a href="contact.html">CONTACT</a></li>
+    <a href="home.html" class="header_logo">
+      <img src="../img/logo-icon-b.png" alt="ロゴ画像です">
+    </a>
+  </div>
+  <div class="hamburger_menu">
+    <ul class="hamburger_nav1">
+      <li>
+        <a href="home.html">TOP</a>
+      </li>
+      <li>
+        <a href="about.html">沢木組を知る</a>
+      </li>
+      <li>
+        <a href="jirei01.html">事例紹介</a>
+      </li>
+      <li>
+        <a href="category.html">先輩社員の声</a>
+      </li>
+      <li>
+        <a href="company.html">企業情報</a>
+      </li>
     </ul>
-  </nav>
+    <ul class="hamburger_nav2">
+      <li>
+        <a href="recruit.html">採用について</a>
+      </li>
+      <li>
+        <a href="contact1.html">お問い合わせ</a>
+      </li>
+    </ul>
+  </div>
 </header>
 <main>
   <div class="breadcrumbs">
@@ -95,15 +121,15 @@
     <p>-Recruit</p>
   </div>
   <div class="fv">
-    <h2 class="fv_heading">安心・安全・快適を創る仕事</h2>
+    <h2 class="fv_heading">安心・安全・快適<span><br></span>を創る仕事</h2>
   </div>
   <div class="about">
     <h3>沢木組はこんな会社です。</h3>
     <p>
-      沢木組は、建築工事・土木工事の２つをメインに工事を請け負っており、<br>
+      沢木組は、建築工事・土木工事の２つを<span><br></span>メインに工事を請け負っており、<br>
       水道管の詰まり解消や雨漏りの修繕工事など、<br>
-      地域住民の暮らしのトラブルにも対応しております。<br>
-      お客様に、「沢木組に頼めば安心だ。」と思っていただけるように、<br>
+      地域住民の暮らしのトラブルにも<span><br></span>対応しております。<br>
+      お客様に、「沢木組に頼めば安心だ。」と<span><br></span>思っていただけるように、<br>
       日々作業にあたっております。
     </p>
   </div>
@@ -146,122 +172,126 @@
     </ul>
   </div>
   <div class="recruit" id="rec_kenchiku">
-    <div class="recruit_wrap">
-      <div class="heading_l">
-        <h2>建築技術者</h2>
-        <p>-Architectural Engineer</p>
+    <div class="recruit_inner">
+      <div class="recruit_wrap">
+        <div class="heading_l">
+          <h2>建築技術者</h2>
+          <p>-Architectural Engineer</p>
+        </div>
+        <div class="recruit_table">
+          <table>
+            <tr>
+              <th>職務内容</th>
+              <td colspan="2">
+                建築工事の設計・施工・管理<br>
+                ※現場施工の経験のある方
+              </td>
+            </tr>
+            <tr>
+              <th>雇用形態・採用人数</th>
+              <td colspan="2">正社員・1人</td>
+            </tr>
+            <tr>
+              <th>学歴（履修科目）</th>
+              <td colspan="2">高卒以上</td>
+            </tr>
+            <tr>
+              <th>就業時間</th>
+              <td colspan="2">8時10分～17時</td>
+            </tr>
+            <tr>
+              <th>必要な経験等</th>
+              <td colspan="2">現場施工経験者</td>
+            </tr>
+            <tr>
+              <th>必要な免許資格</th>
+              <td colspan="2">普通自動車免許（AT限定不可）<br>
+              1級建築士または建築施工管理士</td>
+            </tr>
+            <tr>
+              <th>待遇</th>
+              <td class="_short">○給与月給制<br>
+              ○休日土・祝日<br>
+              ○待遇・福利厚生</td>
+              <td>200,000円～400,000円<br>
+              4週8休制　年間105日<br>
+              賞与年2回 社会保険完備</td>
+            </tr>
+            <tr>
+              <th>選考</th>
+              <td class="_short">○日時<br>
+              ○必要書類<br>
+              ○担当者</td>
+              <td>随時、当社にて<br>
+              履歴書<br>
+              総務部 関谷洋史　<span><br></span>TEL 0185-23-3434</td>
+            </tr>
+          </table>
+        </div>
       </div>
-      <div class="recruit_table">
-        <table>
-          <tr>
-            <th>職務内容</th>
-            <td colspan="2">
-              建築工事の設計・施工・管理<br>
-              ※現場施工の経験のある方
-            </td>
-          </tr>
-          <tr>
-            <th>雇用形態・採用人数</th>
-            <td colspan="2">正社員・1人</td>
-          </tr>
-          <tr>
-            <th>学歴（履修科目）</th>
-            <td colspan="2">高卒以上</td>
-          </tr>
-          <tr>
-            <th>就業時間</th>
-            <td colspan="2">8時10分～17時</td>
-          </tr>
-          <tr>
-            <th>必要な経験等</th>
-            <td colspan="2">現場施工経験者</td>
-          </tr>
-          <tr>
-            <th>必要な免許資格</th>
-            <td colspan="2">普通自動車免許（AT限定不可）<br>
-            1級建築士または建築施工管理士</td>
-          </tr>
-          <tr>
-            <th>待遇</th>
-            <td class="_short">○給与月給制<br>
-            ○休日土・祝日<br>
-            ○待遇・福利厚生</td>
-            <td>200,000円～400,000円<br>
-            4週8休制　年間105日<br>
-            賞与年2回 社会保険完備</td>
-          </tr>
-          <tr>
-            <th>選考</th>
-            <td class="_short">○日時<br>
-            ○必要書類<br>
-            ○担当者</td>
-            <td>随時、当社にて<br>
-            履歴書<br>
-            総務部 関谷洋史 　TEL 0185-23-3434</td>
-          </tr>
-        </table>
-      </div>
+      <div class="recruit_parallax par_1"></div>
     </div>
-    <div class="recruit_parallax par_1"></div>
   </div>
   <div class="recruit" id="rec_kankouji">
-    <div class="recruit_wrap">
-      <div class="heading_l">
-        <h2>管工事技術者</h2>
-        <p>-Plumbing Engineer</p>
+    <div class="recruit_inner">
+      <div class="recruit_wrap">
+        <div class="heading_l">
+          <h2>管工事技術者</h2>
+          <p>-Plumbing Engineer</p>
+        </div>
+        <div class="recruit_table">
+          <table>
+            <tr>
+              <th>職務内容</th>
+              <td colspan="2">
+                管工事の設計・施工・管理<br>
+                ※現場施工の経験のある方
+              </td>
+            </tr>
+            <tr>
+              <th>雇用形態・採用人数</th>
+              <td colspan="2">正社員・1人</td>
+            </tr>
+            <tr>
+              <th>学歴（履修科目）</th>
+              <td colspan="2">高卒以上</td>
+            </tr>
+            <tr>
+              <th>就業時間</th>
+              <td colspan="2">8時10分～17時</td>
+            </tr>
+            <tr>
+              <th>必要な経験等</th>
+              <td colspan="2">現場経験者</td>
+            </tr>
+            <tr>
+              <th>必要な免許資格</th>
+              <td colspan="2">普通自動車免許（AT限定不可）<br>
+              1級管工事施工管理技士</td>
+            </tr>
+            <tr>
+              <th>待遇</th>
+              <td class="_short">○給与月給制<br>
+              ○休日土・祝日<br>
+              ○待遇・福利厚生</td>
+              <td>200,000円～400,000円<br>
+              4週8休制　年間105日<br>
+              賞与年2回 社会保険完備</td>
+            </tr>
+            <tr>
+              <th>選考</th>
+              <td class="_short">○日時<br>
+              ○必要書類<br>
+              ○担当者</td>
+              <td>随時、当社にて<br>
+              履歴書<br>
+              総務部 関谷洋史　<span><br></span>TEL 0185-23-3434</td>
+            </tr>
+          </table>
+        </div>
       </div>
-      <div class="recruit_table">
-        <table>
-          <tr>
-            <th>職務内容</th>
-            <td colspan="2">
-              管工事の設計・施工・管理<br>
-              ※現場施工の経験のある方
-            </td>
-          </tr>
-          <tr>
-            <th>雇用形態・採用人数</th>
-            <td colspan="2">正社員・1人</td>
-          </tr>
-          <tr>
-            <th>学歴（履修科目）</th>
-            <td colspan="2">高卒以上</td>
-          </tr>
-          <tr>
-            <th>就業時間</th>
-            <td colspan="2">8時10分～17時</td>
-          </tr>
-          <tr>
-            <th>必要な経験等</th>
-            <td colspan="2">現場経験者</td>
-          </tr>
-          <tr>
-            <th>必要な免許資格</th>
-            <td colspan="2">普通自動車免許（AT限定不可）<br>
-            1級管工事施工管理技士</td>
-          </tr>
-          <tr>
-            <th>待遇</th>
-            <td class="_short">○給与月給制<br>
-            ○休日土・祝日<br>
-            ○待遇・福利厚生</td>
-            <td>200,000円～400,000円<br>
-            4週8休制　年間105日<br>
-            賞与年2回 社会保険完備</td>
-          </tr>
-          <tr>
-            <th>選考</th>
-            <td class="_short">○日時<br>
-            ○必要書類<br>
-            ○担当者</td>
-            <td>随時、当社にて<br>
-            履歴書<br>
-            総務部 関谷洋史 　TEL 0185-23-3434</td>
-          </tr>
-        </table>
-      </div>
+      <div class="recruit_parallax par_2"></div>
     </div>
-    <div class="recruit_parallax par_2"></div>
   </div>
   <div class="recruit" id="rec_doboku">
     <div class="recruit_wrap">
@@ -315,7 +345,7 @@
             ○担当者</td>
             <td>随時、当社にて<br>
             履歴書<br>
-            総務部 関谷洋史 　TEL 0185-23-3434</td>
+            総務部 関谷洋史　<span><br></span>TEL 0185-23-3434</td>
           </tr>
         </table>
       </div>

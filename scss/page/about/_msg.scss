@@ -3,21 +3,45 @@
 .msg {
   position: relative;
   z-index: -1;
-  // padding: vw_p(126) vw_p(123);
   padding: vw_p(80) vw_p(123) vw_p(100);
   background-color: $blue;
   color: $white;
-  font-weight: 600;
+  font-weight: 500;
   text-align: center;
-
-  h2 {
-    @include fzp(36);
+  
+  @include mq(tb) {
+    padding: vw_t(80) vw_t(48) vw_t(80);
   }
 
+  @include mq(sp) {
+    padding: vw_s(48) vw_s(16) vw_s(48);
+  }
+  
+  h2 {
+    @include fzp(36);
+
+    @include mq(tb) {
+      @include fzt(26);
+    }
+
+    @include mq(sp) {
+      @include fzs(26);
+    }
+  }
+  
   &_sub {
     @include fzp(18);
     line-height: 2em;
     margin-top: vw_p(40);
+    
+    @include mq(tb) {
+      @include fzt(18);
+    }
+    
+    @include mq(sp) {
+      margin-top: vw_s(24);
+      @include fzs(16);
+    }
   }
   
   &_txt {
@@ -26,17 +50,40 @@
     font-weight: 400;
     line-height: 2.2em;
     margin-top: vw_p(60);
-  }
 
+    @include mq(tb) {
+      @include fzt(14);
+    }
+
+    @include mq(sp) {
+      margin-top: vw_s(24);
+      @include fzs(14);
+      line-height: 2em;
+    }
+  }
+  
   &::after {
     content: "";
     position: absolute;
     top: vw_p(140);
     left: vw_p(-120);
-    z-index: -1;
     width: vw_p(400);
     height: vw_p(400);
+    z-index: -1;
     background-image: url(../img/about1.jpg);
     background-size: contain;
+    
+    @include mq(tb) {
+      top: vw_t(110);
+      left: vw_t(-180);
+      width: vw_t(480);
+      height: vw_t(480);
+    }
+    @include mq(sp) {
+      top: vw_s(310);
+      left: vw_s(-120);
+      width: vw_s(320);
+      height: vw_s(320);
+    }
   }
 }

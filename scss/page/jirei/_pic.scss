@@ -8,23 +8,62 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: vw_p(33);
-
+  
+  @include mq(tb) {
+    padding: vw_t(30) vw_t(40) vw_t(48);
+    gap: vw_t(32);
+  }
+  
+  @include mq(sp) {
+    padding: vw_s(24) vw_s(16) vw_s(32);
+    gap: vw_s(32);
+  }
+  
   li {
     width: vw_p(320);
     // height: vw_p(213);
     margin-top: vw_p(45);
-
+    
+    @include mq(tb) {
+      width: vw_t(320);
+    }
+    
+    @include mq(sp) {
+      width: vw_s(328);
+      margin-top: 0;
+    }
+    
     img {
       width: vw_p(320);
       height: vw_p(213);
       object-fit: cover;
-    }
+      
+      @include mq(tb) {
+        width: vw_t(320);
+        height: vw_t(213);
+      }
 
+      @include mq(sp) {
+        width: vw_s(328);
+        height: vw_s(218);
+      }
+    }
+    
     h3 {
       margin-top: vw_p(16);
       @include fzp(16);
       font-weight: 500;
       line-height: 1.6em;
+      
+      @include mq(tb) {
+        margin-top: vw_t(10);
+        @include fzt(14);
+      }
+      
+      @include mq(sp) {
+        margin-top: vw_s(8);
+        @include fzs(14);
+      }
     }
   }
 }

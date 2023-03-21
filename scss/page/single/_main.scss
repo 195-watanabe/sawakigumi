@@ -4,6 +4,16 @@
   background: linear-gradient(90deg, $white 60%, $lGray 100%);
   padding-top: vw_p(48);
   padding-bottom: vw_p(80);
+  
+  @include mq(tb) {
+    padding-top: vw_t(48);
+    padding-bottom: vw_t(48);
+  }
+  
+  @include mq(sp) {
+    padding-top: vw_s(32);
+    padding-bottom: vw_s(32);
+  }
 
   &_wrap {
     display: flex;
@@ -11,20 +21,51 @@
     align-items: center;
     padding-left: vw_p(123);
     padding-right: vw_p(197);
+    
+    @include mq(tb) {
+      // align-items: start;
+      padding-left: vw_t(48);
+      padding-right: vw_t(48);
+    }
+    
+    @include mq(sp) {
+      padding: 0 vw_s(16);
+    }
   }
 
   &_q {
     position: relative;
     display: inline-block;
     color: $blue;
-    @include fzp(18);
     font-weight: 500;
+    @include fzp(18);
     padding-bottom: vw_p(28);
-
-    span {
-    @include fzp(32);
+    
+    @include mq(tb) {
+      @include fzt(16);
+      padding-bottom: vw_t(20);
     }
-
+    
+    @include mq(sp) {
+      display: inline;
+      @include fzs(16);
+      line-height: 1.8em;
+      padding-bottom: vw_s(2);
+      background: linear-gradient(transparent 95%, $blue 0%);
+    }
+    
+    span {
+      @include fzp(32);
+      
+      @include mq(tb) {
+        @include fzt(30);
+      }
+      
+      @include mq(sp) {
+        @include fzs(24);
+      }
+    }
+    
     &::after {
       position: absolute;
       bottom: vw_p(24);
@@ -33,7 +74,15 @@
       width: 100%;
       height: vw_p(2);
       background-color: $blue;
-
+      
+      @include mq(tb) {
+        bottom: vw_t(16);
+        height: vw_t(2);
+      }
+      
+      @include mq(sp) {
+        display: none;
+      }
     }
   }
 
@@ -42,6 +91,20 @@
     line-height: 2em;
     padding-left: vw_p(4);
     padding-bottom: vw_p(64);
+    
+    @include mq(tb) {
+      @include fzt(14);
+      padding-left: vw_t(4);
+      padding-bottom: vw_t(48);
+    }
+
+    @include mq(sp) {
+      @include fzs(14);
+      line-height: 1.8em;
+      padding-left: vw_s(0);
+      padding-bottom: vw_s(48);
+      margin-top: vw_s(16);
+    }
   }
 
     &_btn {
@@ -54,5 +117,21 @@
       line-height: vw_p(64);
       text-align: center;
       margin-top: vw_p(24);
+      
+      @include mq(tb) {
+        @include fzt(14);
+        width: vw_t(160);
+        height: vw_t(42);
+        line-height: vw_t(42);
+        margin-top: vw_t(24);
+      }
+      
+      @include mq(sp) {
+        @include fzs(14);
+        width: vw_s(156);
+        height: vw_s(40);
+        line-height: vw_s(40);
+        margin-top: vw_s(0);
+      }
     }
 }

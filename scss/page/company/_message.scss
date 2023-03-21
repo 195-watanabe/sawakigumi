@@ -4,29 +4,83 @@
   padding-top: vw_p(128);
   padding-left: vw_p(107);
   padding-right: vw_p(123);
-
+  
+  @include mq(tb) {
+    padding-top: vw_t(80);
+    padding-left: vw_t(32);
+    padding-right: vw_t(48);
+  }
+  
+  @include mq(sp) {
+    padding: vw_s(32) vw_s(16) 0;
+  }
+  
   &_img {
     width: vw_p(746);
     height: vw_p(420);
     background-image: url(../img/president.jpg);
     background-size: cover;
     margin-top: vw_p(48);
+    
+    @include mq(tb) {
+      width: vw_t(544);
+      height: vw_t(306);
+      margin-top: vw_t(32);
+    }
+    
+    @include mq(sp) {
+      width: vw_s(328);
+      height: vw_s(184);
+      margin-top: vw_s(16);
+    }
   }
   
   &_txt {
     @include fzp(16);
     line-height: 2em;
     margin-top: vw_p(48);
+    
+    @include mq(tb) {
+      @include fzt(14);
+      margin-top: vw_t(32);
+    }
+    
+    @include mq(sp) {
+      @include fzs(14);
+      margin-top: vw_s(16);
+      line-height: 1.8em;
+    }
   }
-
+  
   &_sign {
     text-align: end;
     @include fzp(16);
     margin-top: vw_p(48);
-
+    
+    @include mq(tb) {
+      @include fzt(14);
+      margin-top: vw_t(32);
+    }
+    
+    @include mq(sp) {
+      @include fzs(14);
+      margin-top: vw_s(16);
+      line-height: 1.8em;
+    }
+    
     span {
       @include fzp(20);
-      font-weight: 600;
+      font-weight: 500;
+      
+      @include mq(tb) {
+        @include fzt(18);
+      }
+      
+      @include mq(sp) {
+        @include fzs(18);
+        margin-top: vw_s(16);
+        line-height: 1.8em;
+      }
     }
   }
 }

@@ -3,15 +3,33 @@
 .fv {
 
   &_heading {
-    @include fzp(24);
+    @include fzp(22);
+    position: relative;
+    display: inline-block;
     font-weight: 500;
     line-height: 2em;
-    padding: vw_p(80) vw_p(123) vw_p(64);
+    padding-left: vw_p(16);
+    margin: vw_p(80) vw_p(123) vw_p(64);
+    border-left: solid vw_p(6) $blue;
+    
+    @include mq(tb) {
+      @include fzt(20);
+      padding-left: vw_t(16);
+      margin: vw_t(48) vw_t(16) vw_t(48);
+      border-left: solid vw_t(6) $blue;
+    }
+    
+    @include mq(sp) {
+      @include fzs(16);
+      padding-left: vw_t(16);
+      margin: vw_s(24) vw_s(12) vw_s(24);
+      border-left: solid vw_s(4) $blue;
+    }
   }
-
+  
   &_wrap {
     position: relative;
-
+    
     &::after {
       position: absolute;
       content: "";
@@ -21,14 +39,29 @@
       background-color: $lGray;
       bottom: 0;
       z-index: -1;
+      
     }
   }
-
+  
   &_img {
-    width: vw_p(821);
-    height: vw_p(630);
+    width: vw_p(744);
+    height: vw_p(550);
     margin-left: vw_p(123);
-    padding-bottom: vw_p(90);
+    padding-bottom: vw_p(60);
+    
+    @include mq(tb) {
+      width: vw_t(576);
+      height: vw_t(379);
+      margin-left: vw_t(16);
+      padding-bottom: vw_t(48);
+    }
+    
+    @include mq(sp) {
+      width: vw_s(326);
+      height: vw_s(262);
+      margin-left: vw_s(16);
+      padding-bottom: vw_s(48);
+    }
 
     img {
       width: 100%;
@@ -43,13 +76,28 @@
     bottom: 0;
     padding: vw_p(44) vw_p(44);
     background-color: $white;
-  }
 
+    @include mq(tb) {
+      padding: vw_t(22) vw_t(22);
+    }
+
+    @include mq(sp) {
+      padding: vw_s(12) vw_s(12);
+    }
+  }
+  
   &_info {
     position: relative;
     width: vw_p(462);
-
-
+    
+    @include mq(tb) {
+      width: vw_t(312);
+    }
+    
+    @include mq(sp) {
+      width: vw_s(159);
+    }
+    
     &::after {
       position: absolute;
       bottom: vw_p(-8);
@@ -58,13 +106,37 @@
       width: vw_p(380);
       height: vw_p(1);
       background-color: $black;
-    }
 
+      @include mq(tb) {
+        width: vw_t(278);
+        height: vw_t(1);
+      }
+
+      @include mq(sp) {
+        width: vw_s(152);
+        height: vw_s(1);
+      }
+    }
+    
     p {
       color: $blue;
-      @include fzp(18);
       font-weight: 500;
+      @include fzp(18);
       padding-bottom: vw_p(8);
+      
+      @include mq(tb) {
+        @include fzt(16);
+        padding-bottom: vw_t(8);
+      }
+      
+      @include mq(sp) {
+        @include fzs(12);
+        padding-bottom: vw_s(8);
+      }
+    }
+    
+    .nyuusya {
+      padding-bottom: vw_s(4);
     }
   }
   &_name {
@@ -72,5 +144,15 @@
     @include fzp(24);
     color: $black;
     font-weight: 400;
+    
+    @include mq(tb) {
+      @include fzt(20);
+      margin-top: vw_t(18);
+    }
+    
+    @include mq(sp) {
+      @include fzs(14);
+      margin-top: vw_s(8);
+    }
   }
 }

@@ -4,16 +4,41 @@
   padding: vw_p(144) 0 vw_p(60) vw_p(123);
   color: $white;
   background-color: $blue;
-
+  
+  @include mq(tb) {
+    padding: vw_t(120) 0 vw_t(48) vw_t(47);
+  }
+  
+  @include mq(sp) {
+    padding: vw_s(82) vw_s(16) vw_s(24);
+  }
+  
   h1 {
     @include fzp(30);
-    font-weight: 600;
-  }
+    font-weight: 500;
 
+    @include mq(tb) {
+      @include fzt(20);
+    }
+
+    @include mq(sp) {
+      @include fzs(20);
+    }
+  }
+  
   p {
     @include fzp(16);
-    font-weight: 600;
+    font-weight: 500;
     margin-top: vw_p(8);
+    
+    @include mq(tb) {
+      margin-top: vw_t(6);
+      @include fzt(14);
+    }
+
+    @include mq(sp) {
+      @include fzs(14);
+    }
   }
 
   &._white {

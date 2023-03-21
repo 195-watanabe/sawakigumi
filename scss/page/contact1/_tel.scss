@@ -3,12 +3,28 @@
 .tel {
   padding: vw_p(48) vw_p(229) 0;
 
+  @include mq(tb) {
+    padding: vw_t(32) vw_t(112) 0;
+  }
+
+  @include mq(sp) {
+    padding: vw_s(32) vw_s(16) 0;
+  }
+
   &_wrap {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     width: vw_p(824);
     margin: 0 auto;
+    
+    @include mq(tb) {
+      width: vw_t(544);
+    }
+    
+    @include mq(sp) {
+      width: vw_s(328);
+    }
   }
 
   &_left {
@@ -17,28 +33,53 @@
     justify-content: center;
     align-items: center;
     padding: vw_p(32) 0;
-
+    
+    @include mq(tb) {
+      padding: vw_t(24) 0;
+    }
+    
+    @include mq(sp) {
+      padding: vw_s(12) 0;
+    }
+    
     p {
       text-align: center;
       color: $blue;
       @include fzp(20);
-      font-weight: 600;
+      font-weight: 500;
       line-height: 2em;
+      
+      @include mq(tb) {
+        @include fzt(16);
+        line-height: 1.6em;
+      }
+      
+      @include mq(sp) {
+        @include fzs(12);
+      }
     }
   }
-
+  
   &_right {
     display: flex;
     background-color: $blue;
     justify-content: center;
     align-items: center;
-
+    
     p {
       text-align: center;
       color: $white;
       @include fzp(24);
-      font-weight: 600;
+      font-weight: 500;
       line-height: 2em;
+      
+      @include mq(tb) {
+        @include fzt(20);
+      }
+      
+      @include mq(sp) {
+        @include fzs(14);
+      }
     }
   }
 }

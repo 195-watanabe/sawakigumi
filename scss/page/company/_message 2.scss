@@ -1,0 +1,32 @@
+@use "../../global" as *;
+
+.message {
+  padding-top: vw_p(128);
+  padding-left: vw_p(107);
+  padding-right: vw_p(123);
+
+  &_img {
+    width: vw_p(746);
+    height: vw_p(420);
+    background-image: url(../img/president.jpg);
+    background-size: cover;
+    margin-top: vw_p(48);
+  }
+  
+  &_txt {
+    @include fzp(16);
+    line-height: 2em;
+    margin-top: vw_p(48);
+  }
+
+  &_sign {
+    text-align: end;
+    @include fzp(16);
+    margin-top: vw_p(48);
+
+    span {
+      @include fzp(20);
+      font-weight: 600;
+    }
+  }
+}

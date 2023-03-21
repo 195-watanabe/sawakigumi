@@ -2,32 +2,70 @@
 
 // 真ん中にくるheading
 .heading_c {
-  font-weight: 600;
   
   h2 {
+    font-weight: 700;
     text-align: center;
     @include fzp(48);
-    padding-bottom: vw_p(18);
+    padding-bottom: vw_p(14);
+    
+    @include mq(tb) {
+      @include fzt(32);
+      padding-bottom: vw_t(6);
+    }
+    
+    @include mq(sp) {
+      @include fzs(32);
+      margin-bottom: vw_s(8);
+    }
   }
-
+  
   p {
+    font-weight: 500;
     text-align: center;
     @include fzp(24);
+
+    @include mq(tb) {
+      @include fzt(16);
+    }
+
+    @include mq(sp) {
+      @include fzs(16);
+    }
   }
 }
 
 // 左寄せのheading
 .heading_l {
-  font-weight: 600;
-
+  
   h2 {
-    @include fzp(30);
+    font-weight: 700;
+    @include fzp(28);
     color: $black;
     padding-bottom: vw_p(8);
+    
+    @include mq(tb) {
+      @include fzt(20);
+      padding-bottom: vw_t(4);
+    }
+    
+    @include mq(sp) {
+      @include fzs(20);
+      padding-bottom: vw_s(4);
+    }
   }
-
+  
   p {
-    @include fzp(18);
+    font-weight: 700;
+    @include fzp(14);
     color: $blue;
+
+    @include mq(tb) {
+      @include fzt(12);
+    }
+
+    @include mq(sp) {
+      @include fzs(12);
+    }
   }
 }

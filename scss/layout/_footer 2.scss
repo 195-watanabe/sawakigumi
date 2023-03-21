@@ -1,0 +1,79 @@
+@use "../global" as *;
+
+.footer {
+  background-color: $dGray;
+  padding: vw_p(48) vw_p(16) 0 vw_p(16);
+
+  &_wrap {
+    display: flex;
+  }
+
+  &_logo {
+    display: block;
+    width: vw_p(64);
+    height: vw_p(64);
+  }
+
+  &_company {
+    height: vw_p(202);
+    color: $white;
+    @include fzp(17);
+    font-family: $min;
+    font-weight: 600;
+    padding-top: vw_p(16);
+    padding-left: vw_p(32);
+    padding-right: vw_p(192);
+    border-right: solid vw_p(1) $white;
+
+      span {
+        @include fzp(28);
+      }
+  }
+
+  &_right {
+    display: flex;
+  }
+
+  &_honsya {
+    color: $white;
+    padding-left: vw_p(38) ;
+    
+    h3 {
+      margin-top: vw_p(18);
+      margin-bottom: vw_p(18);
+      @include fzp(16);
+      font-weight: 600;
+    }
+
+    p {
+      @include fzp(12);
+      font-weight: 400;
+      line-height: 2em;
+    }
+  }
+
+  &_shiten {
+    color: $white;
+    padding-left: vw_p(100) ;
+    
+    h3 {
+      margin-top: vw_p(18);
+      margin-bottom: vw_p(18);
+      @include fzp(16);
+      font-weight: 600;
+    }
+
+    p {
+      @include fzp(12);
+      font-weight: 400;
+      line-height: 2em;
+    }
+  }
+
+  &_copyright{
+    color: $white;
+    @include fzp(10);
+    // font-weight: 600;
+    padding: vw_p(18) vw_p(16);
+  }
+}

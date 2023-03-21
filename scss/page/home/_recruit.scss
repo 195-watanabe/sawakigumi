@@ -5,55 +5,144 @@
   padding: vw_p(72) 0 vw_p(120) vw_p(123);
   display: flex;
 
+  @include mq(tb) {
+    padding: vw_t(48) 0 vw_t(80) vw_t(16);
+  }
+
+  @include mq(sp) {
+    padding: vw_s(32) 0 vw_s(48);
+    flex-direction: column-reverse;
+  }
+  
   &_left {
     width: vw_p(533);
     padding-right: vw_p(124);
+    
+    @include mq(tb) {
+      width: vw_t(480);
+      padding-right: vw_t(64);
+    }
+    
+    @include mq(sp) {
+      width: 100vw;
+      padding: vw_s(32) vw_s(16) vw_s(0);
+    }
   }
 
   &_heading {
     position: relative;
     padding-top: vw_p(48);
+    
+    @include mq(tb) {
+      padding-top: vw_t(0);
+    }
 
+    @include mq(sp) {
+      display: none;
+      margin-left: vw_s(16);
+      margin-bottom: vw_s(16);
+    }
+
+    
     h2 {
       @include fzp(40);
-      font-weight: 600;
+      font-weight: 700;
       margin-bottom: vw_p(18);
+      
+      @include mq(tb) {
+        @include fzt(32);
+        margin-bottom: vw_t(6);
+      }
+      
+      @include mq(sp) {
+        @include fzs(32);
+        margin-bottom: vw_s(6);
+      }
     }
     
     p {
       @include fzp(20);
-      font-weight: 600;
+      font-weight: 500;
+
+      @include mq(tb) {
+        @include fzt(14);
+      }
+
+      @include mq(sp) {
+        @include fzs(14);
+      }
     }
 
     &::before {
       content: "";
       position: absolute;
       display: block;
+      background-color: $black;
       width: vw_p(76);
       height: vw_p(3);
-      background-color: $black;
       top: vw_p(76);
       left: vw_p(150);
+      
+      @include mq(tb) {
+        width: vw_t(64);
+        height: vw_t(2);
+        top: vw_t(20);
+        left: vw_t(120);
+      }
+
+      @include mq(sp) {
+        display: block;
+        width: vw_s(44);
+        height: vw_s(1);
+        top: vw_s(22); //調整
+        left: vw_s(116);
+      }
+    }
+    
+    &._sp {
+      display: none;
+      
+      @include mq(sp) {
+        display: block;
+      }
     }
   }
 
   &_title {
     @include fzp(20);
-    font-weight: 600;
+    font-weight: 500;
     margin-top: vw_p(64);
+    
+    @include mq(tb) {
+      @include fzt(20);
+      margin-top: vw_t(64);
+    }
+    
+    @include mq(sp) {
+      @include fzs(18);
+      margin-top: 0;
+    }
   }
-
+  
   &_txt {
     @include fzp(14);
     line-height: 2em;
     margin-top: vw_p(48);
     margin-bottom: vw_p(64);
+    
+    @include mq(tb) {
+      @include fzt(14);
+      margin-top: vw_t(48);
+      margin-bottom: vw_t(32);
+    }
+    
+    @include mq(sp) {
+      @include fzs(14);
+      margin-top: vw_s(32);
+      margin-bottom: vw_s(32);
+    }
   }
-
-  .btn_blue {
-    margin-top: vw_p(48);
-  }
-
+  
   &_right {
     margin-top: vw_p(48);
     width: vw_p(624);
@@ -61,5 +150,20 @@
     background-image:url(../img/recruit1.jpeg);
     background-size: cover;
     background-position: 80% 50%;
+    
+    @include mq(tb) {
+      margin-top: vw_t(80);
+      width: vw_t(272);
+      height: vw_t(416);
+      background-position: 76% 50%;
+    }
+
+    @include mq(sp) {
+      position: relative;
+      margin: 0;
+      width: 100vw;
+      height: vw_s(240);
+      background-position: 76% 50%;
+    }
   }
 }

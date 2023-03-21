@@ -15,38 +15,16 @@
     width: 100%;
     height: vw_p(230);
     background-color: $white;
-    
-    @include mq(tb) {
-      height: vw_t(145);
-    }
-    
-    @include mq(sp) {
-      height: vw_s(169);
-    }
   }
 
   &_wrap {
     position: relative;
     z-index: 2;
-    width: 100vw;
     padding-top: vw_p(16);
     padding-right: vw_p(0);
     padding-left: vw_p(123);
+    width: 100vw;
     height: vw_p(500);
-    
-    @include mq(tb) {
-      padding-top: vw_t(0);
-      padding-right: vw_t(0);
-      padding-left: vw_t(48);
-      height: vw_t(340);
-    }
-    
-    @include mq(tb) {
-      padding-top: vw_s(0);
-      padding-right: vw_s(0);
-      padding-left: vw_s(0);
-      height: vw_s(169);
-    }
 
     img {
       width: 100%;

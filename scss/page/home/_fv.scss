@@ -7,6 +7,14 @@
   position: relative;
   background: no-repeat 50% 50%;
   background-size: cover;
+  
+  @include mq(tb) {
+    height: vw_t(1024);
+  }
+  
+  @include mq(sp) {
+    height: vw_s(640);
+  }
 }
 
 .slideshow {
@@ -28,16 +36,28 @@
 .slideshow._img1 {
   -webkit-animation-delay: 0s;
   animation-delay: -2s;
+
+  @include mq(tb) {
+    background-position: 52% center;
+  }
 }
 
 .slideshow._img2 {
   -webkit-animation-delay: 6s;
   animation-delay: 4s;
+
+  @include mq(tb) {
+    background-position: 55% center;
+  }
 }
 
 .slideshow._img3 {
   -webkit-animation-delay: 12s;
   animation-delay:10s;
+  
+    @include mq(tb) {
+      background-position: 66% 40%;
+    }
 }
 
 .fv_txt {
@@ -48,6 +68,18 @@
   color: $white;
   font-family: $min;
   @include fzp(44);
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.6em;
+  
+  @include mq(tb) {
+    @include fzt(48);
+    top: 50%;
+    bottom: 0;
+    left: vw_t(48);
+    
+    @include mq(sp) {
+      @include fzs(28);
+      left: vw_s(16);
+    }
+  }
 }

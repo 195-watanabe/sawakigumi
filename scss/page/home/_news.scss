@@ -4,6 +4,15 @@
   background-color: $white;
   padding: vw_p(28) vw_p(75);
   display: flex;
+
+  @include mq(tb) {
+    padding: vw_t(16) vw_t(17);
+  }
+
+  @include mq(sp) {
+    padding: vw_s(16) vw_s(16);
+    flex-wrap: wrap;
+  }
 }
 
 .date {
@@ -11,17 +20,41 @@
   font-weight: 500;
   line-height: vw_p(28);
   @include fzp(14);
+  
+  @include mq(tb) {
+    line-height: vw_t(28);
+    @include fzt(14);
+  }
+  
+  @include mq(sp) {
+    line-height: vw_s(20);
+    @include fzs(12);
+  }
 }
 
 .cat {
   display: inline-block;
   background-color: $blue;
-  font-weight: 600;
+  font-weight: 500;
   color: $white;
-  line-height: vw_p(24);
+  line-height: vw_p(28);
   @include fzp(10);
   padding: 0 vw_p(24);
   margin-left: vw_p(24);
+  
+  @include mq(tb) {
+    @include fzt(10);
+    line-height: vw_t(28);
+    padding: 0 vw_t(24);
+    margin-left: vw_t(16);
+  }
+
+  @include mq(sp) {
+    @include fzs(10);
+    line-height: vw_s(20);
+    padding: 0 vw_s(8);
+    margin-left: vw_s(8);
+  }
 }
 
 .news_heading {
@@ -29,6 +62,18 @@
   font-weight: 500;
   line-height: vw_p(28);
   @include fzp(12);
-  // padding: 0 vw_p(28);
   margin-left: vw_p(28);
+
+  @include mq(tb) {
+    @include fzt(12);
+    line-height: vw_t(28);
+    margin-left: vw_t(16);
+  }
+
+  @include mq(sp) {
+    @include fzs(12);
+    line-height: 1.6em;
+    margin-top: vw_s(8);
+    margin-left: vw_s(0);
+  }
 }

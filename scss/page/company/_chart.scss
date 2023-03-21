@@ -5,9 +5,28 @@
   padding-left: vw_p(107);
   padding-right: vw_p(123);
 
+  @include mq(tb) {
+    padding-top: vw_t(100);
+    padding-left: vw_t(32);
+    padding-right: vw_t(32);
+  }
+
+  @include mq(sp) {
+    padding: vw_s(48) vw_s(16) 0;
+  }
+
   &_img {
     margin-top: vw_p(48);
     width: 100%;
     height: auto;
+    
+    @include mq(tb) {
+      margin-top: vw_t(32);
+      margin-bottom: vw_t(32);
+    }
+
+    @include mq(sp) {
+      margin: vw_s(16) 0 ;
+    }
   }
 }

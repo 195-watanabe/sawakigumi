@@ -8,37 +8,81 @@
     content: "";
     position: absolute;
     width: 100%;
-    height: vw_p(567);
+    height: vw_p(527);
     background-color: $white;
-  }
 
+    @include mq(tb) {
+      height: vw_t(300);
+    }
+
+    @include mq(sp) {
+      height: vw_s(240)
+    }
+  }
+  
   &_wrap {
     position: relative;
     z-index: 2;
     padding-top: vw_p(80);
     padding-left: vw_p(121);
     padding-right: vw_p(121);
-  }
+    
+    @include mq(tb) {
+      padding: vw_t(48) vw_t(48) vw_t(0) vw_t(48);
+    }
 
+    @include mq(sp) {
+      padding: vw_s(48) vw_s(16) vw_s(0);
+    }
+  }
+  
   video {
     display: block;
-    width: vw_p(822);
-    height: vw_p(493);
-    margin: vw_p(100) auto vw_p(128);
+    width: vw_p(740);
+    height: vw_p(444);
+    margin: vw_p(64) auto vw_p(100);
+    
+    @include mq(tb) {
+      width: vw_t(544);
+      height: vw_t(308);
+      margin: vw_t(48) auto vw_t(80);
+    }
+    
+    @include mq(sp) {
+      width: vw_s(328);
+      height: vw_s(190);
+      margin: vw_s(48) auto vw_s(48);
+    }
   }
   
   &_nav {
+    box-sizing: border-box;
     display: block;
-    width: vw_p(822);
-    height: vw_p(560);
+    width: vw_p(740);
+    height: vw_p(530);
     margin: 0 auto;
     padding-bottom: vw_p(48);
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 50% 50%;
     gap: vw_p(8) vw_p(8);
+    
+    @include mq(tb) {
+      width: vw_t(544);
+      height: vw_t(398);
+      gap: vw_t(6) vw_t(6);
+      padding-bottom: vw_p(48);
+    }
+
+    @include mq(sp) {
+      width: vw_s(328);
+      height: vw_s(236);
+      gap: vw_s(6) vw_s(6);
+      padding-bottom: vw_s(0);
+    }
 
     li {
+      box-sizing: border-box;
       display: block;
       overflow: hidden;
       width: 100%;
@@ -67,11 +111,21 @@
         bottom: 0;
         color: $white;
         @include fzp(18);
-        font-weight: 600;
+        font-weight: 500;
         text-align: center;
         letter-spacing: .08em;
         line-height: vw_p(52);
         background-color: rgba($color: $black, $alpha: .6);
+        
+        @include mq(tb) {
+          @include fzt(14);
+          line-height: vw_t(36);
+        }
+
+        @include mq(sp) {
+          @include fzs(12);
+          line-height: vw_s(28);
+        }
       }
     }
   }

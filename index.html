@@ -72,19 +72,50 @@
       </ul>
     </div>
   </header>
-  <header class="hamburger">
-    <div class="openbtn">
-      <span></span><span></span><span></span>
+  <header class="hamburger" id="hamburger">
+    <input type="checkbox" id="hamburger-check">
+    <label for="hamburger-check" class="hamburger_btn">
+      <span></span>
+      <p class="hamburger_open">MENU</p>
+      <p class="hamburger_close">CLOSE</p>
+    </label>
+    <div class="header_top">
+      <a href="home.html">
+        <p class="header_title">
+          株式会社　<span>沢木組</span>
+        </p>
+      </a>
+      <a href="home.html" class="header_logo">
+        <img src="../img/logo-icon-b.png" alt="ロゴ画像です">
+      </a>
     </div>
-    <nav class="gnav">
-      <ul class="list">
-        <li class="list_item"><a href="about.html">ABOUT US</a></li>
-        <li class="list_item"><a href="service.html">SERVICE</a></li>
-        <li class="list_item"><a href="works.html">WORKS</a></li>
-        <li class="list_item"><a href="topics.html">TOPICS</a></li>
-        <li class="list_item"><a href="contact.html">CONTACT</a></li>
+    <div class="hamburger_menu">
+      <ul class="hamburger_nav1">
+        <li class="_current">
+          <a href="page/home.html">TOP</a>
+        </li>
+        <li>
+          <a href="page/about.html">沢木組を知る</a>
+        </li>
+        <li>
+          <a href="page/jirei01.html">事例紹介</a>
+        </li>
+        <li>
+          <a href="page/category.html">先輩社員の声</a>
+        </li>
+        <li>
+          <a href="page/company.html">企業情報</a>
+        </li>
       </ul>
-    </nav>
+      <ul class="hamburger_nav2">
+        <li>
+          <a href="page/recruit.html">採用について</a>
+        </li>
+        <li>
+          <a href="page/contact1.html">お問い合わせ</a>
+        </li>
+      </ul>
+    </div>
   </header>
   <main>
     <div class="fv">
@@ -128,7 +159,7 @@
           <img src="img/arrow.svg" alt="矢印">
         </button> -->
         <div class="btnblack">
-          <a href="about.html">
+          <a href="page/about.html">
             <p class="btnblack_txt">Read More</p>
             <div class="btnimg_wrap">
               <img src="img/btn_arrow_black.svg" alt="矢印">
@@ -270,6 +301,10 @@
         </div>
       </div>
       <div class="recruit_right"></div>
+      <div class="recruit_heading _sp">
+        <h2>Recruit</h2>
+        <p>採用情報</p>
+      </div>
     </div>
     <div class="contact">
       <div class="contact_wrap">

@@ -5,12 +5,31 @@
   overflow: hidden;
   padding: vw_p(80) vw_p(123);
   z-index: 1;
-
+  
+  @include mq(tb) {
+    padding: vw_t(48) vw_t(16);
+  }
+  
+  @include mq(sp) {
+    padding: vw_s(24) vw_s(16) vw_s(16);
+  }
+  
   &_msg {
     @include fzp(16);
     padding-bottom: vw_p(80);
+    
+    @include mq(tb) {
+      @include fzt(14);
+      padding-bottom: vw_t(48);
+    }
+    
+    @include mq(sp) {
+      @include fzs(14);
+      padding-bottom: vw_s(32);
+      line-height: 1.6em;
+    }
   }
-
+  
   &_list {
     position: relative;
     display: block;
@@ -19,10 +38,26 @@
     li {
       display: block;
       margin-bottom: vw_p(36);
+
+      @include mq(tb) {
+        margin-bottom: vw_t(32);
+      }
+
+      @include mq(sp) {
+        margin-bottom: vw_s(32);
+      }
     }
     
     li:nth-child(even) {
       margin-left: vw_p(214);
+      
+      @include mq(tb) {
+        margin-left: vw_t(96);
+      }
+
+      @include mq(sp) {
+        margin-left: vw_t(0);
+      }
     }
   }
   
@@ -31,6 +66,17 @@
     height: vw_p(462);
     position: relative;
     overflow: hidden;
+    
+    @include mq(tb) {
+      width: vw_t(640);
+      height: vw_t(360);
+    }
+    
+    @include mq(sp) {
+      width: vw_s(328);
+      // height: vw_s(305);
+      height: auto;
+    }
 
     a {
       display: block;
@@ -47,7 +93,12 @@
       left: 0;
       z-index: 1;
       transition: .4s;
-      object-fit: cover
+      object-fit: cover;
+
+      @include mq(sp) {
+        position: relative;
+        height: vw_s(183);
+      }
     }
 
     &:hover {
@@ -64,6 +115,11 @@
     z-index: 2;
     left: 0;
     bottom: 0;
+
+    @include mq(sp) {
+      position: relative;
+      margin-top: vw_s(6);
+    }
   }
 
   &_up {
@@ -73,9 +129,18 @@
   &_left {
     position: relative;
     display: inline-block;
-    padding: vw_p(14) vw_p(32);
+    padding: vw_p(14) vw_p(24);
     background-color: rgba($color: $blue, $alpha: .7);
-
+    
+    @include mq(tb) {
+      padding: vw_t(12) vw_t(16);
+    }
+    
+    @include mq(sp) {
+      padding: vw_s(8);
+      background-color: rgba($color: $blue, $alpha: 1);
+    }
+    
     &::before {
       position: absolute;
       content: "";
@@ -86,43 +151,112 @@
       top: 50%;
       right: 0;
       transform: translateY(-50%);
+      
+      @include mq(tb) {
+        width: vw_t(1);
+        height: vw_t(42);
+      }
+      
+      @include mq(sp) {
+        width: vw_s(1);
+        height: vw_s(17);
+      }
+      
     }
   }
-
+  
   &_nyuusya {
     color: $white;
-    @include fzp(14);
     font-weight: 500;
+    @include fzp(14);
     margin-bottom: vw_p(8);
+    
+    @include mq(tb) {
+      @include fzt(12);
+      margin-bottom: vw_t(8);
+    }
+    
+    @include mq(sp) {
+      display: inline-block;
+      @include fzs(12);
+      margin-right: vw_s(6);
+      margin-bottom: vw_s(0);
+      line-height: vw_s(20);
+    }
   }
   
   &_bumon {
     color: $white;
     @include fzp(14);
     font-weight: 500;
-  }
+    
+    @include mq(tb) {
+      @include fzt(14);
+    }
 
+    @include mq(sp) {
+      display: inline-block;
+      @include fzs(12);
+      margin-bottom: vw_s(0);
+      line-height: vw_s(20);
+      padding-right: vw_s(4);
+    }
+  }
+  
   &_right {
     position: relative;
     display: inline-flex;
     align-items: end;
-    padding:vw_p(20) vw_p(32) vw_p(20) vw_p(24);
+    padding:vw_p(20) vw_p(24) vw_p(20) vw_p(24);
     background-color: rgba($color: $blue, $alpha: .7);
+    
+    @include mq(tb) {
+      padding:vw_t(22) vw_t(20) vw_t(22) vw_t(16);
+    }
+    
+    @include mq(sp) {
+      display: inline-block;
+      padding: vw_s(8);
+      background-color: rgba($color: $blue, $alpha: 1);
+    }
   }
-
+  
   &_name {
     color: $white;
     @include fzp(18);
     font-weight: 500;
+
+    @include mq(tb) {
+      @include fzt(16);
+    }
+
+    @include mq(sp) {
+      @include fzs(12);
+      line-height: vw_s(20);
+      padding: 0 vw_s(4);
+    }
   }
 
   &_heading {
     display: block;
     width: vw_p(821);
-    padding: vw_p(20) vw_p(32);
+    padding: vw_p(20) vw_p(24);
     @include fzp(18);
     font-weight: 500;
     line-height: 2em;
     background-color: rgba($color: $white, $alpha: .7);
+    
+    @include mq(tb) {
+      width: vw_t(640);
+      padding: vw_t(20) vw_t(20);
+      @include fzt(16);
+    }
+    
+    @include mq(sp) {
+      width: vw_s(326);
+      padding: vw_s(6) 0 0 vw_s(4);
+      @include fzs(14);
+      background-color: rgba($color: $white, $alpha: 0);
+    }
   }
 }

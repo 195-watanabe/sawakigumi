@@ -4,16 +4,50 @@
   padding-top: vw_p(128);
   padding-left: vw_p(107);
   padding-right: vw_p(123);
+
+  @include mq(tb) {
+    padding-top: vw_t(100);
+    padding-left: vw_t(32);
+    padding-right: vw_t(32);
+  }
+
+  @include mq(sp) {
+    padding: vw_s(48) vw_s(16) 0;
+  }
   
   &_table {
     width: 100%;
     margin-top: vw_p(48);
+    
+    @include mq(tb) {
+      margin-top: vw_t(32);
+    }
 
+    @include mq(sp) {
+      margin-top: vw_s(16);
+    }
+    
     tr {
       border-bottom: solid vw_p(1) $black;
-
+      
+      @include mq(tb) {
+        border-bottom: solid vw_t(1) $black;
+      }
+      
+      @include mq(sp) {
+        border-bottom: solid vw_s(1) $black;
+      }
+      
       &:first-child {
         border-top: solid vw_p(1) $black;
+
+        @include mq(tb) {
+          border-top: solid vw_t(1) $black;
+        }
+
+        @include mq(sp) {
+          border-top: solid vw_s(1) $black;
+        }
       }
 
     }
@@ -25,15 +59,42 @@
       @include fzp(16);
       font-weight: 400;
       line-height: 2em;
+      
+      @include mq(tb) {
+        width: vw_t(160);
+        padding: vw_t(10) 0;
+        @include fzt(14);
+      }
+      
+      @include mq(sp) {
+        width: vw_s(70);
+        padding: vw_s(10) 0;
+        @include fzs(12);
+      }
     }
     
     td {
       box-sizing: border-box;
-      // width: vw_p(213);
       padding: vw_p(12) 0;
       @include fzp(16);
       font-weight: 400;
       line-height: 2em;
+
+      @include mq(tb) {
+        padding: vw_t(10) 0;
+        @include fzt(14);
+      }
+
+      @include mq(sp) {
+        padding: vw_s(10) 0 vw_s(10) vw_s(8);
+        @include fzs(12);
+      }
+      
+      span {
+        @include mq(sp) {
+          display: none;
+        }
+      }
     }
   }
 }
